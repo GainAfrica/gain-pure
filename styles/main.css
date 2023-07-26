@@ -1,4 +1,12 @@
 @font-face {
+  font-family: "Dharma Gothic E";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Dharma Gothic E"),
+    url("/assets/fonts/DharmaGothicE_ExBold_R.otf") format("otf");
+}
+
+@font-face {
   font-family: "Formula Condensed Light";
   font-style: normal;
   font-weight: normal;
