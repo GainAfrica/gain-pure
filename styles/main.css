@@ -83,6 +83,20 @@
   background: transparent;
 }
 
+.testimonial {
+  animation-name: fade-in;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media screen and (min-width: 640px) {
   .slider {
     margin-left: calc((100vw - 640px) / 2);
