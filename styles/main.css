@@ -2,8 +2,7 @@
   font-family: "Dharma Gothic E";
   font-style: normal;
   font-weight: normal;
-  src: local("Dharma Gothic E"),
-    url("/assets/fonts/DharmaGothicE_ExBold_R.otf") format("otf");
+  src: url("/assets/fonts/DharmaGothicE_ExBold_R.otf") format("opentype");
 }
 
 @font-face {
