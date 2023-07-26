@@ -70,7 +70,8 @@
   scroll-behavior: smooth;
 }
 
-.slider::-webkit-scrollbar {
+.slider::-webkit-scrollbar,
+.gallery::-webkit-scrollbar {
   width: 0px;
   background: transparent;
 }
