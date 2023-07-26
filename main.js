@@ -68,3 +68,11 @@ scrollContainer.addEventListener("click", (e) => {
   scrollButton.style.left = `${left}px`;
   scrollButton.style.top = `${right}px`;
 });
+
+const box = document.querySelectorAll(".hero-text");
+console.log(box);
+box.forEach((box) => {
+  box.addEventListener("animationend", () => {
+    box.style.opacity = 1;
+  });
+});

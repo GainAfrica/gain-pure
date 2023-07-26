@@ -84,8 +84,23 @@
 }
 
 .testimonial {
-  animation-name: fade-in;
-  animation-duration: 1.5s;
+  animation: fade-in 1.5s;
+}
+
+.hero-text {
+  opacity: 0;
+}
+
+.hero-text-1 {
+  animation: fade-up 1s ease-in-out;
+}
+
+.hero-text-2 {
+  animation: fade-up 1s 0.3s ease-in-out;
+}
+
+.hero-text-3 {
+  animation: fade-up 1s 0.6s ease-in-out;
 }
 
 @keyframes fade-in {
@@ -93,6 +108,17 @@
     opacity: 0.4;
   }
   to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
     opacity: 1;
   }
 }
