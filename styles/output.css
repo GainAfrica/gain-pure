@@ -977,6 +977,10 @@ video {
   height: 6rem;
 }
 
+.h-28 {
+  height: 7rem;
+}
+
 .h-32 {
   height: 8rem;
 }
@@ -1007,6 +1011,10 @@ video {
 
 .w-24 {
   width: 6rem;
+}
+
+.w-28 {
+  width: 7rem;
 }
 
 .w-36 {
@@ -1169,6 +1177,10 @@ video {
 
 .animate-bounce {
   animation: bounce 1s infinite;
+}
+
+.cursor-grabbing {
+  cursor: grabbing;
 }
 
 .cursor-pointer {
@@ -2097,6 +2109,11 @@ video {
   background-color: rgba(0, 0, 0, 0.10);
 }
 
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
 .bg-green {
   --tw-bg-opacity: 1;
   background-color: rgb(91 171 119 / var(--tw-bg-opacity));
@@ -2468,6 +2485,10 @@ video {
 .stacked-fractions {
   --tw-numeric-fraction: stacked-fractions;
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
+}
+
+.leading-\[112px\] {
+  line-height: 112px;
 }
 
 .text-\[\#336699\]\/\[\.35\] {

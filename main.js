@@ -31,3 +31,40 @@ prevBtn.addEventListener("click", () => {
   }
   showTestimonial(counter);
 });
+
+let isDragging = false;
+let startPosX = 0;
+let scrollLeft = 0;
+
+const scrollContainer = document.querySelector(".slider");
+const scrollButton = document.querySelector(".slide-button");
+
+scrollButton.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  startPosX = e.clientX - scrollContainer.offsetLeft;
+  scrollLeft = scrollContainer.scrollLeft;
+});
+
+scrollButton.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+  const x = e.clientX - scrollContainer.offsetLeft;
+  const distance = x - startPosX;
+  scrollContainer.scrollLeft = scrollLeft - distance;
+});
+
+scrollButton.addEventListener("mouseup", () => {
+  isDragging = false;
+});
+
+scrollButton.addEventListener("mouseleave", () => {
+  isDragging = false;
+});
+
+scrollContainer.addEventListener("click", (e) => {
+  let style = getComputedStyle(scrollContainer);
+  const left =
+    e.clientX - parseInt(style.marginLeft) - 20 + scrollContainer.scrollLeft;
+  const right = e.clientY - scrollContainer.getBoundingClientRect().top;
+  scrollButton.style.left = `${left}px`;
+  scrollButton.style.top = `${right}px`;
+});
