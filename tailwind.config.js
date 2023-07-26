@@ -19,6 +19,7 @@ module.exports = {
         yellow: "#EEB931",
         faded: "rgba(0, 0, 0, 0.40)",
         "faded-100": "rgba(0, 0, 0, 0.10)",
+        "faded-white": "rgba(255, 255, 255, 0.10)",
       },
     },
   },

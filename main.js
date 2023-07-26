@@ -40,6 +40,7 @@ const scrollContainer = document.querySelector(".slider");
 const scrollButton = document.querySelector(".slide-button");
 
 scrollButton.addEventListener("mousedown", (e) => {
+  e.preventDefault();
   isDragging = true;
   startPosX = e.clientX - scrollContainer.offsetLeft;
   scrollLeft = scrollContainer.scrollLeft;
@@ -70,9 +71,74 @@ scrollContainer.addEventListener("click", (e) => {
 });
 
 const box = document.querySelectorAll(".hero-text");
-console.log(box);
 box.forEach((box) => {
   box.addEventListener("animationend", () => {
     box.style.opacity = 1;
   });
+});
+
+function is_touch_enabled() {
+  return (
+    "ontouchstart" in window ||
+    navigator.maxTouchPoints > 0 ||
+    navigator.msMaxTouchPoints > 0
+  );
+}
+if (!is_touch_enabled()) {
+  console.log("touch enabled");
+}
+
+let isHorizontalScrolling = false;
+let initialX = 0;
+let initialScrollLeft = 0;
+
+document.addEventListener("mousedown", (event) => {
+  if (isWithinHorizontalSection(event.clientX, event.clientY)) {
+    console.log("mouse is within the container");
+    isHorizontalScrolling = true;
+    initialX = event.clientX;
+    initialScrollLeft = scrollContainer.scrollLeft;
+    event.preventDefault(); // Prevent text selection while dragging
+  }
+});
+
+document.addEventListener("mouseup", () => {
+  isHorizontalScrolling = false;
+});
+
+document.addEventListener("mousemove", (event) => {
+  if (isHorizontalScrolling) {
+    const deltaX = event.clientX - initialX;
+    scrollContainer.scrollLeft = initialScrollLeft - deltaX;
+  }
+});
+
+document.addEventListener("wheel", (event) => {
+  console.log("wheel");
+  if (isWithinHorizontalSection(event.clientX, event.clientY)) {
+    event.preventDefault(); // Prevent default vertical scrolling only when inside horizontal section
+    const delta = event.deltaY;
+    scrollContainer.scrollLeft += delta;
+  }
+});
+
+function isWithinHorizontalSection(clientX, clientY) {
+  console.log("yes");
+  const containerRect = scrollContainer.getBoundingClientRect();
+  const buttonRect = scrollButton.getBoundingClientRect();
+  const containerTop = containerRect.top;
+  const containerBottom = containerRect.bottom;
+  const buttonLeft = buttonRect.left;
+  const buttonRight = buttonRect.right;
+
+  return (
+    clientY >= containerTop &&
+    clientY <= containerBottom &&
+    clientX >= buttonLeft &&
+    clientX <= buttonRight
+  );
+}
+
+scrollContainer.addEventListener("mousedown", (event) => {
+  event.preventDefault();
 });
