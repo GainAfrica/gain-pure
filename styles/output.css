@@ -635,16 +635,6 @@ video {
   inset: -0.25rem;
 }
 
-.inset-x-0 {
-  left: 0px;
-  right: 0px;
-}
-
-.inset-x-auto {
-  left: auto;
-  right: auto;
-}
-
 .-top-20 {
   top: -5rem;
 }
@@ -669,36 +659,16 @@ video {
   left: 20%;
 }
 
+.left-\[50\%\] {
+  left: 50%;
+}
+
 .right-10 {
   right: 2.5rem;
 }
 
 .top-0 {
   top: 0px;
-}
-
-.bottom-0 {
-  bottom: 0px;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.left-auto {
-  left: auto;
-}
-
-.right-auto {
-  right: auto;
-}
-
-.right-20 {
-  right: 5rem;
-}
-
-.left-\[50\%\] {
-  left: 50%;
 }
 
 .top-\[50\%\] {
@@ -780,6 +750,10 @@ video {
   margin-bottom: 3rem;
 }
 
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
 .mb-16 {
   margin-bottom: 4rem;
 }
@@ -796,6 +770,14 @@ video {
   margin-bottom: 7rem;
 }
 
+.mb-32 {
+  margin-bottom: 8rem;
+}
+
+.mb-36 {
+  margin-bottom: 9rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -806,6 +788,10 @@ video {
 
 .mb-44 {
   margin-bottom: 11rem;
+}
+
+.mb-60 {
+  margin-bottom: 15rem;
 }
 
 .mb-64 {
@@ -840,12 +826,20 @@ video {
   margin-top: 6rem;
 }
 
+.mt-28 {
+  margin-top: 7rem;
+}
+
 .mt-32 {
   margin-top: 8rem;
 }
 
 .mt-56 {
   margin-top: 14rem;
+}
+
+.mt-7 {
+  margin-top: 1.75rem;
 }
 
 .mt-9 {
@@ -856,20 +850,12 @@ video {
   margin-top: auto;
 }
 
-.mt-7 {
-  margin-top: 1.75rem;
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
-.mb-36 {
-  margin-bottom: 9rem;
-}
-
-.mb-60 {
-  margin-bottom: 15rem;
-}
-
-.mt-28 {
-  margin-top: 7rem;
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .box-border {
@@ -987,6 +973,10 @@ video {
   height: 3.5rem;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
 .h-32 {
   height: 8rem;
 }
@@ -995,12 +985,12 @@ video {
   height: 355px;
 }
 
-.h-24 {
-  height: 6rem;
-}
-
 .h-\[540px\] {
   height: 540px;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .min-h-screen {
@@ -1013,6 +1003,10 @@ video {
 
 .w-14 {
   width: 3.5rem;
+}
+
+.w-24 {
+  width: 6rem;
 }
 
 .w-36 {
@@ -1029,14 +1023,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-24 {
-  width: 6rem;
-}
-
-.w-\[826px\] {
-  width: 826px;
 }
 
 .min-w-\[500px\] {
@@ -1083,12 +1069,16 @@ video {
   max-width: 32rem;
 }
 
+.max-w-sm {
+  max-width: 24rem;
+}
+
 .max-w-xs {
   max-width: 20rem;
 }
 
-.max-w-sm {
-  max-width: 24rem;
+.max-w-\[201px\] {
+  max-width: 201px;
 }
 
 .flex-1 {
@@ -1641,6 +1631,10 @@ video {
   justify-items: stretch;
 }
 
+.gap-10 {
+  gap: 2.5rem;
+}
+
 .gap-3 {
   gap: 0.75rem;
 }
@@ -1653,8 +1647,8 @@ video {
   gap: 1.5rem;
 }
 
-.gap-10 {
-  gap: 2.5rem;
+.gap-24 {
+  gap: 6rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
