@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Formula Condensed Light"),
-    url("/src/assets/fonts/FormulaCondensed-Light.woff") format("woff");
+    url("/assets/fonts/FormulaCondensed-Light.woff") format("woff");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Formula Condensed Bold"),
-    url("/src/assets/fonts/FormulaCondensed-Bold.woff") format("woff");
+    url("/assets/fonts/FormulaCondensed-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("PP Neue Montreal Book"),
-    url("/src/assets/fonts/ppneuemontreal-book.woff") format("woff");
+    url("/assets/fonts/ppneuemontreal-book.woff") format("woff");
 }
 
 @font-face {
@@ -27,7 +27,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("PP Neue Montreal Italic"),
-    url("/src/assets/fonts/ppneuemontreal-italic.woff") format("woff");
+    url("/assets/fonts/ppneuemontreal-italic.woff") format("woff");
 }
 
 @font-face {
@@ -35,7 +35,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("PP Neue Montreal Thin"),
-    url("/src/assets/fonts/ppneuemontreal-thin.woff") format("woff");
+    url("/assets/fonts/ppneuemontreal-thin.woff") format("woff");
 }
 
 @font-face {
@@ -43,7 +43,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("PP Neue Montreal Medium"),
-    url("/src/assets/fonts/ppneuemontreal-medium.woff") format("woff");
+    url("/assets/fonts/ppneuemontreal-medium.woff") format("woff");
 }
 
 @font-face {
@@ -51,18 +51,18 @@
   font-style: normal;
   font-weight: normal;
   src: local("PP Neue Montreal SemiBold italic"),
-    url("/src/assets/fonts/ppneuemontreal-semibolditalic.woff") format("woff");
+    url("/assets/fonts/ppneuemontreal-semibolditalic.woff") format("woff");
 }
 
 @font-face {
   font-family: "PP Neue Montreal Bold";
   font-style: normal;
   src: local("PP Neue Montreal Bold"),
-    url("/src/assets/fonts/ppneuemontreal-bold.woff") format("woff");
+    url("/assets/fonts/ppneuemontreal-bold.woff") format("woff");
 }
 
 .hero {
-  background: url("/src/assets/images/hero.png") no-repeat center center;
+  background: url("/assets/images/hero.png") no-repeat center center;
   background-size: cover;
 }
 
