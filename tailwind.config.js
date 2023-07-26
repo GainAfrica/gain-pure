@@ -10,8 +10,12 @@ module.exports = {
     },
     extend: {
       colors: {
-        secondary: "#5BAB77",
+        primary: "#D8DEDC",
+        secondary: "#E1D5CB",
         tertiary: "#F1F2EC",
+        green: "#5BAB77",
+        orange: "#EE6357",
+        yellow: "#EEB931",
         faded: "rgba(0, 0, 0, 0.40)",
         "faded-100": "rgba(0, 0, 0, 0.10)",
       },
