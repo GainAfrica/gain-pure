@@ -2245,6 +2245,11 @@ video {
   padding: 0.5px;
 }
 
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .px-14 {
   padding-left: 3.5rem;
   padding-right: 3.5rem;
@@ -2265,25 +2270,16 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
 .pb-28 {
   padding-bottom: 7rem;
 }
 
-.pr-0 {
-  padding-right: 0px;
+.pl-5 {
+  padding-left: 1.25rem;
 }
 
 .pt-32 {
   padding-top: 8rem;
-}
-
-.pl-5 {
-  padding-left: 1.25rem;
 }
 
 .text-left {
@@ -2342,8 +2338,8 @@ video {
   vertical-align: super;
 }
 
-.font-ppbold {
-  font-family: Formula Condensed Bold, sans-serif;
+.font-dharma {
+  font-family: Dharma Gothic E, sans-serif;
 }
 
 .font-ppmontreal {
@@ -2811,7 +2807,7 @@ video {
 }
 
 .heading {
-  font-family: Formula Condensed Bold, sans-serif;
+  font-family: Dharma Gothic E, sans-serif;
   font-size: 8rem;
   line-height: 1;
   text-transform: uppercase;
