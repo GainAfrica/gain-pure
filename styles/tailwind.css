@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 .heading {
-  @apply text-9xl font-dharma uppercase;
+  @apply text-9xl leading-[115px] font-dharma uppercase;
+}
+
+.heading-main {
+  @apply text-[150px] leading-[135px] font-dharma uppercase;
 }

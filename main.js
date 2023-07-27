@@ -114,7 +114,7 @@ document.addEventListener("mousemove", (event) => {
 });
 
 document.addEventListener("wheel", (event) => {
-  console.log("wheel");
+  // console.log("wheel");
   if (isWithinHorizontalSection(event.clientX, event.clientY)) {
     event.preventDefault(); // Prevent default vertical scrolling only when inside horizontal section
     const delta = event.deltaY;
@@ -123,7 +123,7 @@ document.addEventListener("wheel", (event) => {
 });
 
 function isWithinHorizontalSection(clientX, clientY) {
-  console.log("yes");
+  // console.log("yes");
   const containerRect = scrollContainer.getBoundingClientRect();
   const buttonRect = scrollButton.getBoundingClientRect();
   const containerTop = containerRect.top;
@@ -142,3 +142,33 @@ function isWithinHorizontalSection(clientX, clientY) {
 scrollContainer.addEventListener("mousedown", (event) => {
   event.preventDefault();
 });
+
+// function to add header animation
+window.addEventListener("scroll", function () {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const threshold = 70;
+  const header = document.querySelector(".header");
+
+  if (scrollTop > threshold) {
+    header.classList.add("active");
+  } else {
+    header.classList.remove("active");
+  }
+});
+
+// function to update the progress bar for programs section based on scroll position
+function updateProgressBar() {
+  const progressBarFill = document.getElementById("progress-bar-fill");
+  const progressSection = document.getElementById("slider");
+
+  const scrollPercentage =
+    (progressSection.scrollLeft /
+      (progressSection.scrollWidth - progressSection.clientWidth)) *
+    100;
+
+  const progressBarFillPosition = scrollPercentage * 0.8;
+  progressBarFill.style.left = progressBarFillPosition + "%";
+}
+
+document.getElementById("slider").addEventListener("scroll", updateProgressBar);
+updateProgressBar();

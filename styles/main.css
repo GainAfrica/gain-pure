@@ -73,6 +73,26 @@
   background-size: cover;
 }
 
+.header {
+  transition: all 0.5s ease;
+  border: 1px solid transparent;
+}
+
+.header.active {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.header ul li a {
+  transition: all 0.5s ease;
+}
+
+.header.active ul li a {
+  color: #000;
+}
+
 * {
   scroll-behavior: smooth;
 }
@@ -151,4 +171,14 @@
   .slider {
     margin-left: calc((100vw - 1280px) / 2);
   }
+}
+
+@media screen and (min-width: 1536px) {
+  .slider {
+    margin-left: calc((100vw - 1536px) / 2);
+  }
+}
+
+#progress-bar-fill {
+  transition: left 0.3s ease;
 }
