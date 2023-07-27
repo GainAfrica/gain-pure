@@ -1,3 +1,25 @@
+// header section
+// function to add header animation
+window.addEventListener("scroll", function () {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const threshold = 70;
+  const header = document.querySelector(".header");
+
+  if (scrollTop > threshold) {
+    header.classList.add("active");
+  } else {
+    header.classList.remove("active");
+  }
+});
+
+const heroTexts = document.querySelectorAll(".hero-text");
+heroTexts.forEach((text) => {
+  text.addEventListener("animationend", () => {
+    text.style.opacity = 1;
+  });
+});
+
+// testimonials section
 const testimonials = document.querySelectorAll(".testimonial");
 const testimonialContainer = document.querySelector(".testimonial-container");
 const testimonialNumber = document.querySelector(".testimonial-number");
@@ -7,6 +29,7 @@ const prevBtn = document.querySelector(".prev-btn");
 let counter = 0;
 showTestimonial(0);
 
+// function to transition between testimonials
 function showTestimonial(n) {
   let i;
   for (i = 0; i < testimonials.length; i++) {
@@ -32,61 +55,23 @@ prevBtn.addEventListener("click", () => {
   showTestimonial(counter);
 });
 
+// programs section
 let isDragging = false;
 let startPosX = 0;
 let scrollLeft = 0;
 
-const scrollContainer = document.querySelector(".slider");
-const scrollButton = document.querySelector(".slide-button");
+const programContainer = document.getElementById("program-container");
+const dragButton = document.querySelector(".drag-button");
 
-scrollButton.addEventListener("mousedown", (e) => {
-  e.preventDefault();
-  isDragging = true;
-  startPosX = e.clientX - scrollContainer.offsetLeft;
-  scrollLeft = scrollContainer.scrollLeft;
-});
-
-scrollButton.addEventListener("mousemove", (e) => {
-  if (!isDragging) return;
-  const x = e.clientX - scrollContainer.offsetLeft;
-  const distance = x - startPosX;
-  scrollContainer.scrollLeft = scrollLeft - distance;
-});
-
-scrollButton.addEventListener("mouseup", () => {
-  isDragging = false;
-});
-
-scrollButton.addEventListener("mouseleave", () => {
-  isDragging = false;
-});
-
-scrollContainer.addEventListener("click", (e) => {
-  let style = getComputedStyle(scrollContainer);
+// get the drag button to appear anywhere on the program container
+programContainer.addEventListener("click", (e) => {
+  let style = getComputedStyle(programContainer);
   const left =
-    e.clientX - parseInt(style.marginLeft) - 20 + scrollContainer.scrollLeft;
-  const right = e.clientY - scrollContainer.getBoundingClientRect().top;
-  scrollButton.style.left = `${left}px`;
-  scrollButton.style.top = `${right}px`;
+    e.clientX - parseInt(style.marginLeft) - 20 + programContainer.scrollLeft;
+  const right = e.clientY - programContainer.getBoundingClientRect().top;
+  dragButton.style.left = `${left}px`;
+  dragButton.style.top = `${right}px`;
 });
-
-const box = document.querySelectorAll(".hero-text");
-box.forEach((box) => {
-  box.addEventListener("animationend", () => {
-    box.style.opacity = 1;
-  });
-});
-
-function is_touch_enabled() {
-  return (
-    "ontouchstart" in window ||
-    navigator.maxTouchPoints > 0 ||
-    navigator.msMaxTouchPoints > 0
-  );
-}
-if (!is_touch_enabled()) {
-  console.log("touch enabled");
-}
 
 let isHorizontalScrolling = false;
 let initialX = 0;
@@ -94,11 +79,10 @@ let initialScrollLeft = 0;
 
 document.addEventListener("mousedown", (event) => {
   if (isWithinHorizontalSection(event.clientX, event.clientY)) {
-    console.log("mouse is within the container");
     isHorizontalScrolling = true;
     initialX = event.clientX;
-    initialScrollLeft = scrollContainer.scrollLeft;
-    event.preventDefault(); // Prevent text selection while dragging
+    initialScrollLeft = programContainer.scrollLeft;
+    event.preventDefault(); // prevent text selection while dragging
   }
 });
 
@@ -109,23 +93,14 @@ document.addEventListener("mouseup", () => {
 document.addEventListener("mousemove", (event) => {
   if (isHorizontalScrolling) {
     const deltaX = event.clientX - initialX;
-    scrollContainer.scrollLeft = initialScrollLeft - deltaX;
+    programContainer.scrollLeft = initialScrollLeft - deltaX;
   }
 });
 
-document.addEventListener("wheel", (event) => {
-  // console.log("wheel");
-  if (isWithinHorizontalSection(event.clientX, event.clientY)) {
-    event.preventDefault(); // Prevent default vertical scrolling only when inside horizontal section
-    const delta = event.deltaY;
-    scrollContainer.scrollLeft += delta;
-  }
-});
-
+// function to check if the mouse is within the program section
 function isWithinHorizontalSection(clientX, clientY) {
-  // console.log("yes");
-  const containerRect = scrollContainer.getBoundingClientRect();
-  const buttonRect = scrollButton.getBoundingClientRect();
+  const containerRect = programContainer.getBoundingClientRect();
+  const buttonRect = dragButton.getBoundingClientRect();
   const containerTop = containerRect.top;
   const containerBottom = containerRect.bottom;
   const buttonLeft = buttonRect.left;
@@ -138,23 +113,6 @@ function isWithinHorizontalSection(clientX, clientY) {
     clientX <= buttonRight
   );
 }
-
-scrollContainer.addEventListener("mousedown", (event) => {
-  event.preventDefault();
-});
-
-// function to add header animation
-window.addEventListener("scroll", function () {
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  const threshold = 70;
-  const header = document.querySelector(".header");
-
-  if (scrollTop > threshold) {
-    header.classList.add("active");
-  } else {
-    header.classList.remove("active");
-  }
-});
 
 // function to update the progress bar for programs section based on scroll position
 function updateProgramBar() {
@@ -173,6 +131,7 @@ function updateProgramBar() {
 document.getElementById("slider").addEventListener("scroll", updateProgramBar);
 updateProgramBar();
 
+// gallery section
 // function to update the progress bar for gallery section based on scroll position
 function updateGalleryBar() {
   const galleryBarFill = document.getElementById("gallery-bar-fill");
@@ -189,3 +148,14 @@ function updateGalleryBar() {
 
 document.getElementById("gallery").addEventListener("scroll", updateGalleryBar);
 updateGalleryBar();
+
+// function is_touch_enabled() {
+//   return (
+//     "ontouchstart" in window ||
+//     navigator.maxTouchPoints > 0 ||
+//     navigator.msMaxTouchPoints > 0
+//   );
+// }
+// if (!is_touch_enabled()) {
+//   console.log("touch enabled");
+// }
