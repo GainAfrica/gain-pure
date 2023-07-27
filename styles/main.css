@@ -97,8 +97,8 @@
   scroll-behavior: smooth;
 }
 
-.slider::-webkit-scrollbar,
-.gallery::-webkit-scrollbar {
+.program-container::-webkit-scrollbar,
+.gallery-container::-webkit-scrollbar {
   width: 0px;
   background: transparent;
 }
@@ -180,5 +180,18 @@
 }
 
 #progress-bar-fill {
-  transition: left 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.gallery-next-btn,
+.gallery-prev-btn {
+  transition: all 0.3s ease;
+}
+
+.gallery-image {
+  /* width: 800px; */
+  height: 500px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  -o-object-fit: cover;
 }

@@ -63,6 +63,10 @@ let scrollLeft = 0;
 const programContainer = document.getElementById("program-container");
 const dragButton = document.querySelector(".drag-button");
 
+programContainer.addEventListener("mousedown", (event) => {
+  event.preventDefault(); // prevent text selection while dragging
+});
+
 // get the drag button to appear anywhere on the program container
 programContainer.addEventListener("click", (e) => {
   let style = getComputedStyle(programContainer);
@@ -117,36 +121,49 @@ function isWithinHorizontalSection(clientX, clientY) {
 // function to update the progress bar for programs section based on scroll position
 function updateProgramBar() {
   const programBarFill = document.getElementById("program-bar-fill");
-  const programSection = document.getElementById("slider");
 
   const scrollPercentage =
-    (programSection.scrollLeft /
-      (programSection.scrollWidth - programSection.clientWidth)) *
+    (programContainer.scrollLeft /
+      (programContainer.scrollWidth - programContainer.clientWidth)) *
     100;
 
   const programBarFillPosition = scrollPercentage * 0.8;
   programBarFill.style.left = programBarFillPosition + "%";
 }
 
-document.getElementById("slider").addEventListener("scroll", updateProgramBar);
+programContainer.addEventListener("scroll", updateProgramBar);
 updateProgramBar();
 
 // gallery section
+const gallery = document.getElementById("gallery");
+const galleryContainer = document.getElementById("gallery-container");
+const galleryNextBtn = document.querySelector(".gallery-next-btn");
+const galleryPrevBtn = document.querySelector(".gallery-prev-btn");
+
+galleryNextBtn.addEventListener("click", () => {
+  galleryContainer.scrollLeft += 800;
+});
+
+galleryPrevBtn.addEventListener("click", () => {
+  galleryContainer.scrollLeft -= 800;
+});
+
 // function to update the progress bar for gallery section based on scroll position
 function updateGalleryBar() {
   const galleryBarFill = document.getElementById("gallery-bar-fill");
-  const gallerySection = document.getElementById("gallery");
 
   const scrollPercentage =
-    (gallerySection.scrollLeft /
-      (gallerySection.scrollWidth - gallerySection.clientWidth)) *
+    (galleryContainer.scrollLeft /
+      (galleryContainer.scrollWidth - galleryContainer.clientWidth)) *
     100;
 
   const galleryBarFillPosition = scrollPercentage * 0.8;
   galleryBarFill.style.left = galleryBarFillPosition + "%";
 }
 
-document.getElementById("gallery").addEventListener("scroll", updateGalleryBar);
+document
+  .getElementById("gallery-container")
+  .addEventListener("scroll", updateGalleryBar);
 updateGalleryBar();
 
 // function is_touch_enabled() {

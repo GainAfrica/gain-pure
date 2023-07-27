@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gain Africa</title>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script
+      src="https://kit.fontawesome.com/8e4fb64db4.js"
+      crossorigin="anonymous"
+    ></script>
     <link href="/styles/output.css" rel="stylesheet" />
     <link href="/styles/main.css" rel="stylesheet" />
   </head>
@@ -202,7 +206,7 @@
 
         <div class="pl-5" id="programs">
           <div
-            class="flex gap-6 overflow-hidden overflow-x-scroll mb-24 slider relative"
+            class="flex gap-6 overflow-hidden overflow-x-scroll mb-24 program-container relative"
             id="program-container"
           >
             <div
@@ -503,7 +507,6 @@
                   src="https://player.vimeo.com/video/849039893?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                   frameborder="0"
                   allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen
                   style="
                     position: absolute;
                     top: 0;
@@ -670,25 +673,28 @@
 
     <section class="p-5 bg-white">
       <h1 class="heading text-center mt-28 mb-28">Gallery</h1>
-      <div
-        class="gallery flex items-center gap-10 overflow-hidden overflow-x-scroll mb-32"
-        id="gallery"
-      >
-        <img
-          src="assets/images/gallery-1.png"
-          alt=""
-          class="min-w-[826px] h-[540px]"
-        />
-        <img
-          src="assets/images/gallery-2.png"
-          alt=""
-          class="min-w-[826px] h-[540px]"
-        />
-        <img
-          src="assets/images/gallery-3.png"
-          alt=""
-          class="min-w-[826px] h-[540px]"
-        />
+      <div id="gallery" class="relative whitespace-nowrap mb-32">
+        <div
+          class="gallery-prev-btn absolute left-10 top-[50%] translate-y-[-50%] bg-faded p-5 hover:-translate-x-2 z-10 cursor-pointer"
+        >
+          <i class="fa-solid fa-arrow-left text-lg text-white"></i>
+        </div>
+        <div
+          class="gallery-next-btn right-10 top-[50%] translate-y-[-50%] bg-faded p-5 hover:translate-x-2 z-10 absolute cursor-pointer"
+        >
+          <i class="fa-solid fa-arrow-right text-lg text-white"></i>
+        </div>
+        <div
+          class="gallery-container flex items-center gap-20 overflow-hidden overflow-x-scroll relative whitespace-nowrap"
+          id="gallery-container"
+        >
+          <img src="assets/images/gallery-2.png" alt="" class="gallery-image" />
+          <img src="assets/images/program-4.png" alt="" class="gallery-image" />
+          <img src="assets/images/program-2.png" alt="" class="gallery-image" />
+          <img src="assets/images/empower.png" alt="" class="gallery-image" />
+          <img src="assets/images/hero.png" alt="" class="gallery-image" />
+          <img src="assets/images/solution.png" alt="" class="gallery-image" />
+        </div>
       </div>
       <div
         id="gallery-bar"
