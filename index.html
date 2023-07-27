@@ -308,11 +308,11 @@
 
         <div class="px-5">
           <div
-            id="progress-bar"
+            id="program-bar"
             class="container mx-auto w-100 h-[2px] mb-32 bg-faded-white"
           >
             <div
-              id="progress-bar-fill"
+              id="program-bar-fill"
               class="bg-white h-full w-[20%] relative"
             ></div>
           </div>
@@ -568,7 +568,8 @@
     <section class="p-5 bg-white">
       <h1 class="heading text-center mt-28 mb-28">Gallery</h1>
       <div
-        class="gallery flex justify-center items-center gap-10 overflow-hidden overflow-x-scroll mb-60"
+        class="gallery flex justify-center items-center gap-10 overflow-hidden overflow-x-scroll mb-32"
+        id="gallery"
       >
         <img
           src="assets/images/gallery-1.png"
@@ -586,6 +587,15 @@
           class="min-w-[826px] h-[540px]"
         />
       </div>
+      <div
+        id="gallery-bar"
+        class="max-w-5xl mx-auto w-100 h-[2px] mb-32 bg-faded-100"
+      >
+        <div
+          id="gallery-bar-fill"
+          class="bg-black h-full w-[20%] relative"
+        ></div>
+      </div>
     </section>
 
     <section class="bg-secondary text-black p-5">
@@ -596,39 +606,40 @@
           <img src="assets/images/solution.png" alt="" class="h-full" />
         </div>
         <div class="max-w-lg">
-          <p class="font-sm mb-14">TESTIMONIALS</p>
-          <h1 class="heading mb-7">QPAT SOLUTIONS</h1>
-          <p class="text-xl mb-32">
+          <h1 class="heading mb-9">QPAT SOLUTIONS</h1>
+          <p class="text-xl mb-40">
             We are a worldwide network of Africans who believe in a better
             Africa resulting from newly empowered generation of leaders. This
             would be achieved through series of carefully laid out programs with
             participatory and engaging projects also built for financial gains.
           </p>
-          <a href="#" class="bg-black text-white rounded-[100px] px-14 py-3"
-            >Learn more</a
+          <a
+            href="#"
+            class="bg-black text-white rounded-[100px] px-14 py-3 text-sm"
+            >About QPAT</a
           >
         </div>
       </div>
     </section>
 
     <footer class="p-5 bg-black text-white">
-      <div class="container mx-auto">
+      <div class="container mx-auto mt-10">
         <div class="flex justify-between gap-10">
           <div>
             <img src="assets/svgs/logo.svg" alt="" class="w-36" />
           </div>
           <div class="flex justify-center gap-24 text-xl">
             <ul class="list-none">
-              <li class="mb-5">Sitemap</li>
-              <li><a href="#" class="mb-2">What we do</a></li>
-              <li><a href="#" class="mb-2">Gallery</a></li>
-              <li><a href="#" class="mb-2">About us</a></li>
-              <li><a href="#" class="mb-2">Contact</a></li>
+              <li class="mb-5 text-base leading-[16px]">Sitemap</li>
+              <li><a href="#" class="mb-3 inline-block">What we do</a></li>
+              <li><a href="#" class="mb-3 inline-block">Gallery</a></li>
+              <li><a href="#" class="mb-3 inline-block">About us</a></li>
+              <li><a href="#" class="mb-3 inline-block">Contact</a></li>
             </ul>
 
             <div class="max-w-[201px]">
               <ul class="list-none mb-12">
-                <li class="mb-5">Address</li>
+                <li class="mb-5 text-base leading-[16px]">Address</li>
                 <li>#184 Ademola Oniru, Victoria Island, Lagos, Nigeria.</li>
               </ul>
 
@@ -639,7 +650,7 @@
             </div>
           </div>
         </div>
-        <p class="text-base mt-24 mb-5">
+        <p class="text-base leading-[16px] mt-24 mb-5">
           Copyright 2023 - Gain Africa - All Rights Reserved
         </p>
       </div>

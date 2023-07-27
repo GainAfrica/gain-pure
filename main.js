@@ -157,18 +157,35 @@ window.addEventListener("scroll", function () {
 });
 
 // function to update the progress bar for programs section based on scroll position
-function updateProgressBar() {
-  const progressBarFill = document.getElementById("progress-bar-fill");
-  const progressSection = document.getElementById("slider");
+function updateProgramBar() {
+  const programBarFill = document.getElementById("program-bar-fill");
+  const programSection = document.getElementById("slider");
 
   const scrollPercentage =
-    (progressSection.scrollLeft /
-      (progressSection.scrollWidth - progressSection.clientWidth)) *
+    (programSection.scrollLeft /
+      (programSection.scrollWidth - programSection.clientWidth)) *
     100;
 
-  const progressBarFillPosition = scrollPercentage * 0.8;
-  progressBarFill.style.left = progressBarFillPosition + "%";
+  const programBarFillPosition = scrollPercentage * 0.8;
+  programBarFill.style.left = programBarFillPosition + "%";
 }
 
-document.getElementById("slider").addEventListener("scroll", updateProgressBar);
-updateProgressBar();
+document.getElementById("slider").addEventListener("scroll", updateProgramBar);
+updateProgramBar();
+
+// function to update the progress bar for gallery section based on scroll position
+function updateGalleryBar() {
+  const galleryBarFill = document.getElementById("gallery-bar-fill");
+  const gallerySection = document.getElementById("gallery");
+
+  const scrollPercentage =
+    (gallerySection.scrollLeft /
+      (gallerySection.scrollWidth - gallerySection.clientWidth)) *
+    100;
+
+  const galleryBarFillPosition = scrollPercentage * 0.8;
+  galleryBarFill.style.left = galleryBarFillPosition + "%";
+}
+
+document.getElementById("slider").addEventListener("scroll", updateGalleryBar);
+updateGalleryBar();
