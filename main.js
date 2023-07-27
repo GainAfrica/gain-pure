@@ -187,5 +187,5 @@ function updateGalleryBar() {
   galleryBarFill.style.left = galleryBarFillPosition + "%";
 }
 
-document.getElementById("slider").addEventListener("scroll", updateGalleryBar);
+document.getElementById("gallery").addEventListener("scroll", updateGalleryBar);
 updateGalleryBar();
