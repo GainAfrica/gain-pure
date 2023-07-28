@@ -3,9 +3,21 @@
 @tailwind utilities;
 
 .heading {
-  @apply text-9xl leading-[115px] font-dharma uppercase;
+  @apply text-9xl leading-[90%] font-dharma uppercase;
 }
 
 .heading-main {
-  @apply text-[150px] leading-[135px] font-dharma uppercase;
+  @apply text-[150px] leading-[90%] font-dharma uppercase;
+}
+
+@media screen and (max-width: 1024px) {
+  .heading-main {
+    @apply text-[100px];
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading-main {
+    @apply text-[80px];
+  }
 }

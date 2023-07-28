@@ -2,7 +2,7 @@
   font-family: "Dharma Gothic E";
   font-style: normal;
   font-weight: normal;
-  src: url("/assets/fonts/DharmaGothicE_ExBold_R.otf") format("opentype");
+  src: url("/assets/fonts/DharmaGothicE_Heavy_R.otf") format("opentype");
 }
 
 @font-face {
@@ -185,6 +185,10 @@
 
 .gallery-next-btn,
 .gallery-prev-btn {
+  transition: all 0.3s ease;
+}
+
+.transition-normal {
   transition: all 0.3s ease;
 }
 
