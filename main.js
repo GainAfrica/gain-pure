@@ -1,17 +1,4 @@
-// header section
-// function to add header animation
-window.addEventListener("scroll", function () {
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  const threshold = 70;
-  const header = document.querySelector(".header");
-
-  if (scrollTop > threshold) {
-    header.classList.add("active");
-  } else {
-    header.classList.remove("active");
-  }
-});
-
+// hero text animation
 const heroTexts = document.querySelectorAll(".hero-text");
 heroTexts.forEach((text) => {
   text.addEventListener("animationend", () => {
@@ -25,6 +12,8 @@ const testimonialContainer = document.querySelector(".testimonial-container");
 const testimonialNumber = document.querySelector(".testimonial-number");
 const nextBtn = document.querySelector(".next-btn");
 const prevBtn = document.querySelector(".prev-btn");
+
+console.log(testimonialNumber);
 
 let counter = 0;
 showTestimonial(0);

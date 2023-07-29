@@ -20,7 +20,7 @@
           <img src="/assets/svgs/logo.svg" alt="logo" class="w-full" />
         </div>
 
-        <nav>
+        <nav class="lg:block hidden">
           <ul class="list-none flex justify-center items-center gap-12">
             <li><a href="/" class="text-black">Home</a></li>
             <li><a href="/#whatwedo" class="text-black">What we do</a></li>
@@ -29,11 +29,53 @@
           </ul>
         </nav>
 
-        <div>
+        <div class="lg:block hidden">
           <a href="#" class="bg-black text-white rounded-[100px] px-14 py-3"
             >Partner with us</a
           >
         </div>
+
+        <div
+          class="w-10 h-10 rounded-full bg-black flex items-center overflow-hidden cursor-pointer bar-toggler flex-col justify-center gap-[6px] navbar-toggler-icon lg:hidden relative z-50"
+        >
+          <div
+            class="bar bar-1 w-[70%] h-[2px] bg-white hamburger-bar hamburger-bar-1 transition-normal"
+          ></div>
+          <div
+            class="bar bar-2 w-[70%] h-[2px] bg-white hamburger-bar hamburger-bar-2 transition-normal"
+          ></div>
+        </div>
+
+        <nav
+          class="block lg:hidden mobile-nav fixed top-0 w-full left-[100%] h-screen transition-normal bg-white z-20"
+        >
+          <ul
+            class="list-none flex justify-center items-center flex-col gap-12 h-screen"
+          >
+            <li><a href="/" class="text-black text-xl">Home</a></li>
+            <li>
+              <a href="/#whatwedo" class="text-black text-xl">What we do</a>
+            </li>
+            <li>
+              <a href="/#programs" class="text-black text-xl">Programs</a>
+            </li>
+            <li><a href="/about" class="text-black text-xl">About us</a></li>
+          </ul>
+        </nav>
+        <!-- 
+        <nav class="lg:block hidden">
+          <ul class="list-none flex justify-center items-center gap-12">
+            <li><a href="/" class="text-black">Home</a></li>
+            <li><a href="/#whatwedo" class="text-black">What we do</a></li>
+            <li><a href="/#programs" class="text-black">Programs</a></li>
+            <li><a href="/about" class="text-black">About us</a></li>
+            <li>
+              <a href="#" class="bg-black text-white rounded-[100px] px-14 py-3"
+                >Partner with us</a
+              >
+            </li>
+          </ul>
+        </nav> -->
       </div>
     </header>
 
@@ -64,7 +106,10 @@
             <p class="text-xl leading-[100%] lg:mb-56 mb-5">
               Concept & Design Supervisor
             </p>
-            <a href="" class="lg:mb-28 mb-20 inline-block"
+            <a
+              href="https://uk.linkedin.com/in/fionawhitty"
+              target="_blank"
+              class="lg:mb-28 mb-20 inline-block"
               ><img src="/assets/svgs/linkedin.svg" alt=""
             /></a>
             <p class="text-lg md:text-xl">
@@ -129,6 +174,6 @@
       </div>
     </footer>
 
-    <script src="/main.js"></script>
+    <script src="/base.js"></script>
   </body>
 </html>
