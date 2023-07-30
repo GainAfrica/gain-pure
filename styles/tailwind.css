@@ -14,10 +14,18 @@
   .heading-main {
     @apply text-[100px];
   }
+
+  .heading {
+    @apply text-7xl;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .heading-main {
     @apply text-[80px];
+  }
+
+  .heading {
+    @apply text-5xl;
   }
 }

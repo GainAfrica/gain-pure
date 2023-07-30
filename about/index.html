@@ -22,10 +22,10 @@
 
         <nav class="lg:block hidden">
           <ul class="list-none flex justify-center items-center gap-12">
-            <li><a href="/" class="text-black">Home</a></li>
-            <li><a href="/#whatwedo" class="text-black">What we do</a></li>
-            <li><a href="/#programs" class="text-black">Programs</a></li>
-            <li><a href="/about" class="text-black">About us</a></li>
+            <li><a href="/" class="text-white">Home</a></li>
+            <li><a href="/#whatwedo" class="text-white">What we do</a></li>
+            <li><a href="/#programs" class="text-white">Programs</a></li>
+            <li><a href="/about" class="text-white">About us</a></li>
           </ul>
         </nav>
 
@@ -52,30 +52,16 @@
           <ul
             class="list-none flex justify-center items-center flex-col gap-12 h-screen"
           >
-            <li><a href="/" class="text-black text-xl">Home</a></li>
+            <li><a href="/" class="text-white text-xl">Home</a></li>
             <li>
-              <a href="/#whatwedo" class="text-black text-xl">What we do</a>
+              <a href="/#whatwedo" class="text-white text-xl">What we do</a>
             </li>
             <li>
-              <a href="/#programs" class="text-black text-xl">Programs</a>
+              <a href="/#programs" class="text-white text-xl">Programs</a>
             </li>
-            <li><a href="/about" class="text-black text-xl">About us</a></li>
+            <li><a href="/about" class="text-white text-xl">About us</a></li>
           </ul>
         </nav>
-        <!-- 
-        <nav class="lg:block hidden">
-          <ul class="list-none flex justify-center items-center gap-12">
-            <li><a href="/" class="text-black">Home</a></li>
-            <li><a href="/#whatwedo" class="text-black">What we do</a></li>
-            <li><a href="/#programs" class="text-black">Programs</a></li>
-            <li><a href="/about" class="text-black">About us</a></li>
-            <li>
-              <a href="#" class="bg-black text-white rounded-[100px] px-14 py-3"
-                >Partner with us</a
-              >
-            </li>
-          </ul>
-        </nav> -->
       </div>
     </header>
 
@@ -91,35 +77,45 @@
             Your browser is not supported
           </video>
         </div>
-        <h1
-          class="text-white font-extrabold absolute left-16 top-52 heading-main max-w-[822px] her-text"
-        >
-          <span class="hero-text hero-text-1 relative inline-block"
-            >Changing Lives,</span
+
+        <div class="h-screen flex flex-col gap-10 justify-between">
+          <h1
+            class="text-white font-extrabold mt-36 sm:mt-48 heading-main max-w-[822px] her-text"
           >
-          <span class="hero-text hero-text-2 relative inline-block"
-            >Building Futures</span
+            <span class="hero-text hero-text-1 relative inline-block"
+              >Changing Lives,</span
+            >
+            <span class="hero-text hero-text-2 relative inline-block"
+              >Building Futures</span
+            >
+          </h1>
+
+          <div
+            class="flex mb-10 gap-10 flex-col-reverse sm:flex-row items-start sm:items-end justify-between"
           >
-        </h1>
-        <a href="#whatweare">
-          <img
-            src="/assets/svgs/arrow-down.svg"
-            alt="arrow-down"
-            class="absolute bottom-10 left-6 animate-bounce cursor-pointer"
-          />
-        </a>
-        <p
-          class="text-2xl max-w-[439px] absolute bottom-10 right-6 text-white text-right"
-        >
-          To inspire, nurture, mentor and empower the generation of future
-          leaders
-        </p>
+            <a href="#whoweare">
+              <img
+                src="/assets/svgs/arrow-down.svg"
+                alt="arrow-down"
+                class="animate-bounce cursor-pointer"
+              />
+            </a>
+            <p
+              class="text-2xl max-w-[439px] text-white text-left sm:text-right"
+            >
+              To inspire, nurture, mentor and empower the generation of future
+              leaders
+            </p>
+          </div>
+        </div>
       </section>
 
       <div class="bg-secondary">
-        <section class="p-5">
+        <section class="p-5" id="whoweare">
           <div class="container mx-auto mt-24">
-            <p class="w-1/2 ml-auto text-4xl leading-[135%] mb-24">
+            <p
+              class="w-full md:w-3/4 lg:w-1/2 ml-auto text-2xl md:text-3xl lg:text-4xl leading-[135%] mb-24"
+            >
               We are a registered non-governmental organization (non-profit
               organization). We believe in empowering Africans of all age groups
               to seize opportunities, impart the society and at the same time
@@ -127,11 +123,11 @@
             </p>
             <p class="text-xl mb-6">Founded in</p>
             <h1
-              class="text-[250px] font-dharma leading-[90%] uppercase text-orange mb-36"
+              class="lg:text-[250px] md:text-[150px] text-[100px] font-dharma leading-[90%] uppercase text-orange mb-36"
             >
               2016
             </h1>
-            <div class="w-1/2 ml-auto mb-32">
+            <div class="w-full md:w-3/4 lg:w-1/2 ml-auto mb-32">
               <img src="/assets/images/about.png" alt="" class="" />
             </div>
             <hr class="border-faded-100 mb-12" />
@@ -141,19 +137,21 @@
         <section class="p-5">
           <div class="container mx-auto mt-12">
             <h1
-              class="text-[150px] font-dharma uppercase leading-[76.8%] text-center mb-32"
+              class="lg:text-[150px] md:text-[120px] text-[80px] font-dharma uppercase leading-[76.8%] text-center mb-32"
             >
               Our Team
             </h1>
-            <div class="flex justify-center items-center gap-20 mx-auto mb-48">
-              <div class="flex-1 relative mx-auto max-w-[350px]">
+            <div
+              class="flex justify-center items-center flex-wrap gap-20 gap-y-44 mx-auto mb-48"
+            >
+              <div class="flex-1 relative mx-auto max-w-[350px] min-w-[300px]">
                 <img
                   src="/assets/images/fashakin2.jpg"
                   alt=""
                   class="h-[375px]"
                 />
                 <div
-                  class="bg-blue px-6 py-5 max-w-[240px] absolute bottom-[-100px] left-[-53px]"
+                  class="bg-blue px-6 py-5 max-w-[240px] absolute bottom-[-100px] left-[0px] md:left-[-10%]"
                 >
                   <p
                     class="text-2xl leading-[100%] font-medium mb-3 text-white"
@@ -173,14 +171,14 @@
                   >
                 </div>
               </div>
-              <div class="flex-1 relative mx-auto max-w-[350px]">
+              <div class="flex-1 relative mx-auto max-w-[350px] min-w-[300px]">
                 <img
                   src="/assets/images/temitope.png"
                   alt=""
                   class="h-[375px]"
                 />
                 <div
-                  class="bg-yellow px-6 py-5 max-w-[240px] absolute bottom-[-100px] left-[-53px]"
+                  class="bg-yellow px-6 py-5 max-w-[240px] absolute bottom-[-100px] left-[0px] md:left-[-10%]"
                 >
                   <p
                     class="text-2xl leading-[100%] font-medium mb-3 text-white"
@@ -200,10 +198,10 @@
                   >
                 </div>
               </div>
-              <div class="flex-1 relative mx-auto max-w-[350px]">
+              <div class="flex-1 relative mx-auto max-w-[350px] min-w-[300px]">
                 <img src="/assets/images/fiona.jpg" alt="" class="h-[375px]" />
                 <div
-                  class="bg-green px-6 py-5 max-w-[240px] absolute bottom-[-100px] left-[-53px]"
+                  class="bg-green px-6 py-5 max-w-[240px] absolute bottom-[-100px] left-[0px] md:left-[-10%]"
                 >
                   <p
                     class="text-2xl leading-[100%] font-medium mb-3 text-white"
@@ -229,13 +227,13 @@
 
         <section class="p-5">
           <div class="container mx-auto mt-12">
-            <div class="flex items-end justify-between gap-10 mb-40">
+            <div class="lg:flex items-end justify-between gap-10 mb-40">
               <h1
-                class="text-[150px] font-dharma uppercase leading-[76.8%] max-w-[403px]"
+                class="lg:text-[150px] md:text-[120px] text-[80px] font-dharma uppercase leading-[76.8%] max-w-[403px] mb-12 lg:mb-0"
               >
                 Our Values
               </h1>
-              <p class="text-lg max-w-[403px]">
+              <p class="text-lg lg:max-w-[403px] max-w-[600px]">
                 At GAIN Africa, our core value is empowerment. We firmly believe
                 in unlocking the full potential of individuals and communities
                 alike.
@@ -244,10 +242,18 @@
 
             <div>
               <hr class="border-faded-100 mb-9" />
-              <div class="flex justify-between gap-5 mb-9">
-                <div class="flex justify-between gap-56">
-                  <h1 class="font-dharma text-5xl uppercase">01</h1>
-                  <h1 class="font-dharma text-5xl uppercase">Impactful</h1>
+              <div class="lg:flex justify-between gap-5 mb-9">
+                <div
+                  class="flex justify-between md:gap-56 gap-10 mb-12 lg:mb-0"
+                >
+                  <h1 class="font-dharma text-3xl md:text-5xl uppercase">01</h1>
+                  <h1
+                    class="font-dharma text-3xl md:text-5xl uppercase"
+                    text-right
+                    md:text-left
+                  >
+                    Impactful
+                  </h1>
                 </div>
                 <p class="text-lg max-w-[403px]">
                   We are out to change the game of leadership, education and
@@ -259,10 +265,16 @@
 
             <div>
               <hr class="border-faded-100 mb-9" />
-              <div class="flex justify-between gap-5 mb-9">
-                <div class="flex justify-between gap-56">
-                  <h1 class="font-dharma text-5xl uppercase">02</h1>
-                  <h1 class="font-dharma text-5xl uppercase">supportive</h1>
+              <div class="lg:flex justify-between gap-5 mb-9">
+                <div
+                  class="flex justify-between md:gap-56 gap-10 mb-12 lg:mb-0"
+                >
+                  <h1 class="font-dharma text-3xl md:text-5xl uppercase">02</h1>
+                  <h1
+                    class="font-dharma text-3xl md:text-5xl uppercase text-right md:text-left"
+                  >
+                    supportive
+                  </h1>
                 </div>
                 <p class="text-lg max-w-[403px]">
                   We believe in supporting the smallest unit of the society: the
@@ -275,10 +287,16 @@
 
             <div>
               <hr class="border-faded-100 mb-9" />
-              <div class="flex justify-between gap-5 mb-9">
-                <div class="flex justify-between gap-56">
-                  <h1 class="font-dharma text-5xl uppercase">03</h1>
-                  <h1 class="font-dharma text-5xl uppercase">resourceful</h1>
+              <div class="lg:flex justify-between gap-5 mb-9">
+                <div
+                  class="flex justify-between md:gap-56 gap-10 mb-12 lg:mb-0"
+                >
+                  <h1 class="font-dharma text-3xl md:text-5xl uppercase">03</h1>
+                  <h1
+                    class="font-dharma text-3xl md:text-5xl uppercase text-right md:text-left"
+                  >
+                    resourceful
+                  </h1>
                 </div>
                 <p class="text-lg max-w-[403px]">
                   We train all our members and participant to be resourceful in
@@ -291,10 +309,14 @@
 
             <div>
               <hr class="border-faded-100 mb-9" />
-              <div class="flex justify-between gap-5 mb-9">
-                <div class="flex justify-between gap-56">
-                  <h1 class="font-dharma text-5xl uppercase">04</h1>
-                  <h1 class="font-dharma text-5xl uppercase">
+              <div class="lg:flex justify-between gap-5 mb-9">
+                <div
+                  class="flex justify-between md:gap-56 gap-10 mb-12 lg:mb-0"
+                >
+                  <h1 class="font-dharma text-3xl md:text-5xl uppercase">04</h1>
+                  <h1
+                    class="font-dharma text-3xl md:text-5xl uppercase text-right md:text-left"
+                  >
                     financial independence
                   </h1>
                 </div>
@@ -309,10 +331,16 @@
 
             <div>
               <hr class="border-faded-100 mb-9" />
-              <div class="flex justify-between gap-5 mb-9">
-                <div class="flex justify-between gap-56">
-                  <h1 class="font-dharma text-5xl uppercase">05</h1>
-                  <h1 class="font-dharma text-5xl uppercase">greater career</h1>
+              <div class="lg:flex justify-between gap-5 mb-9">
+                <div
+                  class="flex justify-between md:gap-56 gap-10 mb-12 lg:mb-0"
+                >
+                  <h1 class="font-dharma text-3xl md:text-5xl uppercase">05</h1>
+                  <h1
+                    class="font-dharma text-3xl md:text-5xl uppercase text-right md:text-left"
+                  >
+                    greater career
+                  </h1>
                 </div>
                 <p class="text-lg max-w-[403px]">
                   We build in the young ones leadership values and attributes
@@ -324,10 +352,16 @@
 
             <div>
               <hr class="border-faded-100 mb-9" />
-              <div class="flex justify-between gap-5 mb-40">
-                <div class="flex justify-between gap-56">
-                  <h1 class="font-dharma text-5xl uppercase">06</h1>
-                  <h1 class="font-dharma text-5xl uppercase">leadership</h1>
+              <div class="lg:flex justify-between gap-5 mb-9">
+                <div
+                  class="flex justify-between md:gap-56 gap-10 mb-12 lg:mb-0"
+                >
+                  <h1 class="font-dharma text-3xl md:text-5xl uppercase">06</h1>
+                  <h1
+                    class="font-dharma text-3xl md:text-5xl uppercase text-right md:text-left"
+                  >
+                    leadership
+                  </h1>
                 </div>
                 <p class="text-lg max-w-[403px]">
                   We build in the young ones leadership values and attributes
