@@ -1549,6 +1549,22 @@ video {
   gap: 2rem;
 }
 
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
+.hover\:underline-offset-1:hover {
+  text-underline-offset: 1px;
+}
+
+.hover\:underline-offset-4:hover {
+  text-underline-offset: 4px;
+}
+
+.hover\:underline-offset-2:hover {
+  text-underline-offset: 2px;
+}
+
 @media (min-width: 640px) {
   .sm\:mt-48 {
     margin-top: 12rem;
