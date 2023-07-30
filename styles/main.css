@@ -290,3 +290,15 @@ video {
 .mobile-nav.active {
   left: 0;
 }
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s ease;
+}
+
+/* Animation classes to be added when elements enter the viewport */
+.fade-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -179,3 +179,26 @@ updateGalleryBar();
 // if (!is_touch_enabled()) {
 //   console.log("touch enabled");
 // }
+
+// Get the elements to animate
+const titleElement = document.querySelectorAll(".fade-up");
+
+// Create the intersection observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    // If the element is in the viewport, add the animation class
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate");
+    } else {
+      // If the element is not in the viewport, remove the animation class
+      entry.target.classList.remove("animate");
+    }
+  });
+});
+
+// Observe the elements
+titleElement.forEach((element) => {
+  observer.observe(element);
+});
+// observer.observe(titleElement);
+// observer.observe(paragraphElement);
