@@ -13,8 +13,6 @@ const testimonialNumber = document.querySelector(".testimonial-number");
 const nextBtn = document.querySelector(".next-btn");
 const prevBtn = document.querySelector(".prev-btn");
 
-console.log(testimonialNumber);
-
 let counter = 0;
 showTestimonial(0);
 

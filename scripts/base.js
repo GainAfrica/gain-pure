@@ -12,48 +12,54 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// second hamburger menu
+// hamburger menu
 const hamburgerIcon = document.querySelector(".navbar-toggler-icon");
 const hamburgerBar = document.querySelectorAll(".hamburger-bar");
 const hamburgerBar1 = document.querySelector(".hamburger-bar-1");
 const hamburgerBar2 = document.querySelector(".hamburger-bar-2");
 const mobileNav = document.querySelector(".mobile-nav");
+const mobileNavLinks = mobileNav.querySelectorAll("a");
 
 // Animation for "X"
-////////////////////
-////////////////////
 let isRotated = false;
+
 function rotateBar() {
   hamburgerBar.forEach((bar) => {
     bar.classList.add("rotate");
   });
 }
-function unrotateBar() {
+
+function unRotateBar() {
   hamburgerBar.forEach((bar) => {
     bar.classList.remove("rotate");
   });
 }
+
 function reduceBar() {
   hamburgerBar.forEach((bar) => {
     bar.classList.add("reduce");
   });
 }
+
 function growBar() {
   hamburgerBar.forEach((bar) => {
     bar.classList.remove("reduce");
   });
 }
+
 function raiseBar() {
   hamburgerBar.forEach((bar) => {
     bar.classList.add("raise");
   });
 }
+
 function dropBar() {
   hamburgerBar.forEach((bar) => {
     bar.classList.remove("raise");
   });
 }
-function drawBAr() {
+
+function drawBar() {
   hamburgerBar.forEach((bar) => {
     bar.classList.add("draw-bar");
   });
@@ -65,34 +71,49 @@ function eraseBar() {
   });
 }
 
-function clearBars() {
+function clearBar() {
   hamburgerBar.forEach((bar) => {
     bar.classList.remove("translate");
   });
 }
 
-function barsAway() {
+function fillBar() {
   hamburgerBar.forEach((bar) => {
     bar.classList.add("translate");
   });
 }
 
+function activateMenu() {
+  reduceBar();
+  clearBar();
+  unRotateBar();
+  setTimeout(raiseBar, 300);
+  setTimeout(drawBar, 350);
+}
+
+function deactivateMenu() {
+  rotateBar();
+  eraseBar();
+  growBar();
+  dropBar();
+  setTimeout(fillBar, 300);
+}
+
 hamburgerIcon.addEventListener("click", () => {
   mobileNav.classList.toggle("active");
   if (isRotated) {
-    rotateBar();
-    eraseBar();
-    growBar();
-    dropBar();
-    barsAway();
-    setTimeout(barsAway, 300);
+    deactivateMenu();
     isRotated = false;
   } else {
-    reduceBar();
-    clearBars();
-    unrotateBar();
-    setTimeout(raiseBar, 300);
-    setTimeout(drawBAr, 350);
+    activateMenu();
     isRotated = true;
   }
+});
+
+mobileNavLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    deactivateMenu();
+    mobileNav.classList.remove("active");
+    isRotated = false;
+  });
 });
