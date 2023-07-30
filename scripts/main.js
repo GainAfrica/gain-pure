@@ -1,11 +1,3 @@
-// hero text animation
-const heroTexts = document.querySelectorAll(".hero-text");
-heroTexts.forEach((text) => {
-  text.addEventListener("animationend", () => {
-    text.style.opacity = 1;
-  });
-});
-
 // testimonials section
 const testimonials = document.querySelectorAll(".testimonial");
 const testimonialContainer = document.querySelector(".testimonial-container");
