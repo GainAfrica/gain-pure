@@ -77,29 +77,33 @@
           Your browser is not supported
         </video>
       </div>
-      <h1
-        class="text-white font-extrabold absolute right-16 bottom-10 heading-main max-w-3xl her-text"
+      <div
+        class="h-screen flex flex-col-reverse sm:flex-row gap-10 gap-y-20 justify-between pb-10 pt-36 items-start sm:items-end"
       >
-        <span class="hero-text hero-text-1 relative inline-block"
-          >Unlocking and</span
+        <a href="#whatweare">
+          <img
+            src="/assets/svgs/arrow-down.svg"
+            alt="arrow-down"
+            class="animate-bounce cursor-pointer"
+          />
+        </a>
+        <h1
+          class="text-white font-extrabold heading-main max-w-[380px] md:max-w-[480px] lg:max-w-3xl mt-auto"
         >
-        <span class="hero-text hero-text-2 relative inline-block"
-          >Harnessing</span
-        >
-        <span class="hero-text hero-text-3 relative inline-block"
-          >African Talent</span
-        >
-      </h1>
-      <a href="#whatweare">
-        <img
-          src="/assets/svgs/arrow-down.svg"
-          alt="arrow-down"
-          class="absolute bottom-10 left-6 animate-bounce cursor-pointer"
-        />
-      </a>
+          <span class="hero-text hero-text-1 relative inline-block"
+            >Unlocking and</span
+          >
+          <span class="hero-text hero-text-2 relative inline-block"
+            >Harnessing</span
+          >
+          <span class="hero-text hero-text-3 relative inline-block"
+            >African Talent</span
+          >
+        </h1>
+      </div>
     </section>
 
-    <section class="p-5 bg-primary" id="whatweare">
+    <section class="p-5 pb-20 bg-primary" id="whatweare">
       <div class="lg:flex lg:gap-5 container mx-auto mt-20">
         <div class="relative lg:flex-1">
           <p class="text-black text-sm">ABOUT US</p>
@@ -112,7 +116,7 @@
             <img
               src="/assets/images/who-2.png"
               alt=""
-              class="relative -top-20 left-[20%] z-10"
+              class="relative -top-20 sm:left-[20%] left-[5%] z-10"
             />
           </div>
         </div>
@@ -139,7 +143,7 @@
 
     <section class="bg-green p-5">
       <div class="max-w-[827px] text-white mx-auto my-52">
-        <p class="text-4xl leading-[45px]">
+        <p class="text-2xl md:text-4xl leading-[125%]">
           “We are out to change the game of education, leadership, and
           investments in the society by leveraging on international and local
           connections with professionals in various sectors. We believe in
@@ -189,11 +193,11 @@
           <div class="container mx-auto">
             <p class="text-sm mb-9">WHAT WE DO</p>
 
-            <div class="flex justify-between gap-5 mb-24">
-              <h1 class="heading max-w-2xl">
+            <div class="lg:flex justify-between gap-5 mb-24">
+              <h1 class="heading max-w-2xl lg:mb-0 mb-10">
                 Engaging YOUTHS in Empowering Projects
               </h1>
-              <p class="text-lg max-w-[400px] mt-auto mb-4">
+              <p class="text-lg max-w-[600px] lg:max-w-[400px] mt-auto mb-4">
                 We are invested in resources that would create life long
                 opportunities for exceptionally talented youths that would
                 enable them secure world class education that would give them an
@@ -214,7 +218,9 @@
           <div class="container mx-auto">
             <div class="max-w-3xl mx-auto">
               <p class="text-base leading-5 mb-12">THE UMBRELLA</p>
-              <p class="text-5xl leading-[60px] mb-11 max-w-[720px]">
+              <p
+                class="text-3xl lg:text-5xl leading-[125%] mb-11 max-w-[720px]"
+              >
                 LEAP in me which stands for Leadership Entrepreneurship Academic
                 Program: Inspire, Nurture, Mentor, Empower.
               </p>
@@ -236,7 +242,9 @@
 
             <div class="pt-52" id="programs">
               <p class="text-base leading-5 mb-9">OUR PROGRAMS</p>
-              <p class="text-[56px] leading-[70px] max-w-[615px] mb-36">
+              <p
+                class="text-3xl lg:text-[56px] leading-[125%] max-w-[615px] mb-36"
+              >
                 These are the programs we run internally
               </p>
             </div>
@@ -253,10 +261,12 @@
             >
               Drag
             </div>
-            <div class="bg-orange px-5 py-10 relative min-w-[500px]">
+            <div
+              class="bg-orange px-5 py-10 relative min-w-[400px] lg:min-w-[500px]"
+            >
               <div class="mb-12 flex justify-between">
                 <p
-                  class="font-dharma uppercase text-[64px] leading-[64px] max-w-[280px] h-32"
+                  class="font-dharma uppercase text-[64px] leading-[64px] max-w-[280px] h-32 mb-10"
                 >
                   Scholars in Residence
                 </p>
@@ -265,7 +275,10 @@
                 </p>
               </div>
 
-              <a href="#" class="text-white text-sm leading-[14px]"
+              <a
+                href="http://scholarsinresidence.org/"
+                target="_blank"
+                class="text-white text-sm leading-[14px]"
                 >Learn more
                 <img
                   src="/assets/svgs/arrow-down-right.svg"
@@ -276,10 +289,12 @@
                 <img src="/assets/images/program-1.png" alt="" class="w-full" />
               </div>
             </div>
-            <div class="bg-green px-5 py-10 relative min-w-[500px]">
+            <div
+              class="bg-green px-5 py-10 relative min-w-[400px] lg:min-w-[500px]"
+            >
               <div class="mb-12 flex justify-between">
                 <p
-                  class="font-dharma uppercase text-[64px] leading-[64px] max-w-[280px] h-32"
+                  class="font-dharma uppercase text-[64px] leading-[64px] max-w-[280px] h-32 mb-10"
                 >
                   Bookspal
                 </p>
@@ -288,7 +303,10 @@
                 </p>
               </div>
 
-              <a href="#" class="text-white text-sm leading-[14px]"
+              <a
+                href="https://bookspals.org/"
+                target="_blank"
+                class="text-white text-sm leading-[14px]"
                 >Learn more
                 <img
                   src="/assets/svgs/arrow-down-right.svg"
@@ -299,10 +317,12 @@
                 <img src="/assets/images/program-2.png" alt="" class="w-full" />
               </div>
             </div>
-            <div class="bg-yellow px-5 py-10 relative min-w-[500px]">
+            <div
+              class="bg-yellow px-5 py-10 relative min-w-[400px] lg:min-w-[500px]"
+            >
               <div class="mb-12 flex justify-between">
                 <p
-                  class="font-dharma uppercase text-[64px] leading-[64px] max-w-[280px] h-32"
+                  class="font-dharma uppercase text-[64px] leading-[64px] max-w-[280px] h-32 mb-10"
                 >
                   Public school Tutorship
                 </p>
@@ -323,10 +343,12 @@
               </div>
             </div>
 
-            <div class="bg-blue px-5 py-10 relative min-w-[500px] mr-10">
+            <div
+              class="bg-blue px-5 py-10 relative min-w-[400px] lg:min-w-[500px] mr-10"
+            >
               <div class="mb-12 flex justify-between">
                 <p
-                  class="font-dharma uppercase text-[64px] leading-[64px] max-w-[140px] h-32"
+                  class="font-dharma uppercase text-[64px] leading-[64px] max-w-[140px] h-32 mb-10"
                 >
                   Animal Thrift
                 </p>
@@ -367,13 +389,15 @@
       <div class="container mx-auto mt-36">
         <p class="mb-16 text-sm">TESTIMONIALS</p>
         <h1 class="heading max-w-2xl mb-28">Here’s what people have to say</h1>
-        <p class="text-5xl leading-[60px] mb-20 max-w-4xl ml-auto">
+        <p class="text-3xl lgtext-5xl leading-[125%] mb-20 max-w-4xl ml-auto">
           LEAP in me which stands for Leadership Entrepreneurship Academic
           Program: Inspire, Nurture, Mentor, Empower.
         </p>
 
-        <div class="flex mb-44 justify-between gap-6 items-start">
-          <div class="w-64 flex gap-3 items-center">
+        <div class="md:flex mb-44 justify-between gap-6 items-start">
+          <div
+            class="w-64 flex gap-3 items-center md:mb-0 mb-16 whitespace-nowrap"
+          >
             <img
               src="/assets/svgs/arrow-left.svg"
               alt=""
@@ -390,7 +414,7 @@
             />
           </div>
 
-          <div class="max-w-4xl">
+          <div class="max-w-4xl w-full">
             <div class="testimonial-container">
               <div class="testimonial">
                 <div class="flex gap-6 mb-12 items-center">
@@ -538,8 +562,8 @@
         <hr class="border-faded-100" />
 
         <p class="font-sm mb-20 mt-7">VIDEOS</p>
-        <div class="flex justify-center gap-6 mb-40">
-          <div class="flex-1">
+        <div class="flex justify-center gap-6 mb-40 flex-wrap lg:flex-nowrap">
+          <div class="flex-1 min-w-[250px]">
             <div class="mb-7 bg-faded-100">
               <div
                 class="wistia_embed wistia_async_53xf7fh0qv seo=true videoFoam=false"
@@ -578,7 +602,7 @@
             <p class="text-sm text-faded">Student, AAMU</p>
           </div>
 
-          <div class="flex-1">
+          <div class="flex-1 min-w-[250px]">
             <div class="mb-7 bg-faded-100">
               <div
                 class="wistia_embed wistia_async_6wwxlz3j46 seo=true videoFoam=false"
@@ -612,24 +636,12 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="relative h-[355px] mb-7">
-              <img
-                src="/assets/images/video-1.png"
-                alt=""
-                class="w-full max-w-full"
-              />
-              <img
-                src="/assets/svgs/play.svg"
-                alt=""
-                class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-24 h-24"
-              />
-            </div> -->
             <p class="mb-4 text-sm">01:07</p>
             <p class="text-2xl">Israel Oyekan</p>
             <p class="text-sm text-faded">Student, AAMU</p>
           </div>
 
-          <div class="flex-1">
+          <div class="flex-1 min-w-[250px]">
             <div class="h-[400px] mb-7 bg-faded-100">
               <div
                 class="wistia_embed wistia_async_jvktqm40c0 seo=true videoFoam=false"
@@ -664,8 +676,8 @@
               </div>
             </div>
 
-            <p class="mb-4 text-sm">01:28</p>
-            <p class="text-2xl">Osionela Ogiogwa</p>
+            <p class="mb-4 text-sm">01:38</p>
+            <p class="text-2xl">Kehinde Ezekiel</p>
             <p class="text-sm text-faded">Ph.D, Scripps Research Institute</p>
           </div>
         </div>
@@ -674,18 +686,20 @@
 
     <section class="p-5 bg-black text-white">
       <div class="container mx-auto pt-32 pb-28">
-        <h1 class="heading max-w-sm mb-40">Impact in numbers</h1>
+        <h1 class="heading max-w-[400px] mb-40">Impact in numbers</h1>
         <hr class="border-white" />
-        <div class="flex justify-center items-center gap-6 mt-24">
-          <div class="flex-1">
+        <div
+          class="flex justify-center items-center gap-6 gap-y-10 mt-24 flex-wrap"
+        >
+          <div class="flex-1 min-w-[250px]">
             <h1 class="heading">100+</h1>
             <p>Beneficiaries of our program</p>
           </div>
-          <div class="flex-1">
+          <div class="flex-1 min-w-[250px]">
             <h1 class="heading">$6.5M</h1>
             <p>Amount facilitated</p>
           </div>
-          <div class="flex-1">
+          <div class="flex-1 min-w-[250px]">
             <h1 class="heading">5,000</h1>
             <p>Individuals/Students reached out</p>
           </div>
@@ -743,10 +757,14 @@
 
     <section class="bg-secondary text-black p-5">
       <div
-        class="container mx-auto flex mt-28 mb-40 justify-between items-center gap-6"
+        class="container mx-auto lg:flex mt-28 mb-40 justify-between items-center gap-6"
       >
         <div>
-          <img src="/assets/images/solution.png" alt="" class="h-full" />
+          <img
+            src="/assets/images/solution.png"
+            alt=""
+            class="h-full mb-20 lg:mb-0"
+          />
         </div>
         <div class="max-w-lg">
           <h1 class="heading mb-9">QPAT SOLUTIONS</h1>
@@ -802,16 +820,14 @@
       </div>
     </footer>
 
-    <script src="https://player.vimeo.com/api/player.js"></script>
     <script
       src="https://fast.wistia.com/embed/medias/jvktqm40c0.jsonp"
       async
     ></script>
     <script
-      src="https://fast.wistia.com//assets/external/E-v1.js"
+      src="https://fast.wistia.com/assets/external/E-v1.js"
       async
     ></script>
-
     <script src="/scripts/base.js"></script>
     <script src="/scripts/hero.js"></script>
     <script src="/scripts/main.js"></script>

@@ -193,13 +193,23 @@
 }
 
 .gallery-image {
-  /* width: 800px; */
   height: 500px;
   aspect-ratio: 16/9;
   object-fit: cover;
   -o-object-fit: cover;
 }
 
+@media screen and (max-width: 1024px) {
+  .gallery-image {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-image {
+    height: 300px;
+  }
+}
 #background {
   background-color: #0f0f0f;
   bottom: 0;
