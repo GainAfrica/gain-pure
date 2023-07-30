@@ -1,7 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ["./*.{html,js}", "./about/**/*.{html,js}"],
+  content: [
+    "./*.{html,js}",
+    "./about/**/*.{html,js}",
+    "./error/**/*.{html,js}",
+  ],
   theme: {
     fontFamily: {
       dharma: ["Dharma Gothic E", "sans-serif"],

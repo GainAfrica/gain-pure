@@ -911,10 +911,6 @@ video {
   min-width: 300px;
 }
 
-.min-w-\[500px\] {
-  min-width: 500px;
-}
-
 .min-w-\[400px\] {
   min-width: 400px;
 }
@@ -969,6 +965,10 @@ video {
 
 .max-w-\[403px\] {
   max-width: 403px;
+}
+
+.max-w-\[408px\] {
+  max-width: 408px;
 }
 
 .max-w-\[439px\] {
@@ -1125,16 +1125,16 @@ video {
   row-gap: 2.5rem;
 }
 
+.gap-y-12 {
+  row-gap: 3rem;
+}
+
 .gap-y-20 {
   row-gap: 5rem;
 }
 
 .gap-y-44 {
   row-gap: 11rem;
-}
-
-.gap-y-12 {
-  row-gap: 3rem;
 }
 
 .overflow-hidden {
@@ -1345,6 +1345,10 @@ video {
   font-size: 15px;
 }
 
+.text-\[250px\] {
+  font-size: 250px;
+}
+
 .text-\[64px\] {
   font-size: 64px;
 }
@@ -1371,6 +1375,10 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-\[200px\] {
+  font-size: 200px;
 }
 
 .font-extrabold {
@@ -1553,6 +1561,10 @@ video {
   .sm\:text-right {
     text-align: right;
   }
+
+  .sm\:text-\[250px\] {
+    font-size: 250px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1578,14 +1590,6 @@ video {
 
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:flex-wrap {
-    flex-wrap: wrap;
-  }
-
-  .md\:flex-nowrap {
-    flex-wrap: nowrap;
   }
 
   .md\:justify-center {
