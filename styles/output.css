@@ -863,6 +863,10 @@ video {
   height: 100vh;
 }
 
+.max-h-\[375px\] {
+  max-height: 375px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1233,6 +1237,11 @@ video {
 .bg-yellow {
   --tw-bg-opacity: 1;
   background-color: rgb(238 185 49 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#252121\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 33 33 / var(--tw-bg-opacity));
 }
 
 .p-5 {
@@ -1716,6 +1725,10 @@ video {
 
   .lg\:gap-5 {
     gap: 1.25rem;
+  }
+
+  .lg\:pr-9 {
+    padding-right: 2.25rem;
   }
 
   .lg\:text-4xl {
