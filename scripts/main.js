@@ -69,29 +69,65 @@ document.addEventListener("mousedown", (event) => {
   }
 });
 
-window.addEventListener("wheel", (event) => {
-  if (isWithinHorizontalSection(event.clientX, event.clientY)) {
-    // Get the cursor position
-    const mouseX = event.clientX;
-    const mouseY = event.clientY - programContainer.getBoundingClientRect().top;
+// window.addEventListener("wheel", (event) => {
+//   if (isWithinHorizontalSection(event.clientX, event.clientY)) {
+//     // Get the cursor position
+//     const mouseX = event.clientX;
+//     const mouseY = event.clientY - programContainer.getBoundingClientRect().top;
 
-    // Update the position of the circle element to follow the cursor
-    dragButton.style.left = mouseX + "px";
-    dragButton.style.top = mouseY + "px";
-  }
-});
+//     // Update the position of the circle element to follow the cursor
+//     dragButton.style.left = mouseX + "px";
+//     dragButton.style.top = mouseY + "px";
+//   }
+// });
 
+// document.addEventListener("mousemove", (event) => {
+//   if (isWithinHorizontalSection(event.clientX, event.clientY)) {
+//     // Get the cursor position
+//     const mouseX = event.clientX;
+//     const mouseY = event.clientY - programContainer.getBoundingClientRect().top;
+
+//     // Update the position of the circle element to follow the cursor
+//     dragButton.style.left = mouseX + "px";
+//     dragButton.style.top = mouseY + "px";
+//   }
+// });
+
+// Get the circle element
+// const circle = document.querySelector('.circle');
+
+// Initialize variables to store the cursor position
+let mouseX = 0;
+let mouseY = 0;
+
+// Function to update the position of the circle element
+function updateCirclePosition() {
+  // Calculate the difference between the current position and the target position
+  const deltaX = mouseX - parseInt(dragButton.style.left || 0, 10);
+  const deltaY =
+    mouseY -
+    parseInt(dragButton.style.top || 0, 10) -
+    programContainer.getBoundingClientRect().top;
+
+  // Apply smooth movement by updating the position with a fraction of the difference
+  const easeAmount = 0.15;
+  dragButton.style.left =
+    parseInt(dragButton.style.left || 0, 10) + deltaX * easeAmount + "px";
+  dragButton.style.top =
+    parseInt(dragButton.style.top || 0, 10) + deltaY * easeAmount + "px";
+
+  // Call requestAnimationFrame() recursively to create a smooth animation loop
+  requestAnimationFrame(updateCirclePosition);
+}
+
+// Attach the mousemove event listener to update the cursor position
 document.addEventListener("mousemove", (event) => {
-  if (isWithinHorizontalSection(event.clientX, event.clientY)) {
-    // Get the cursor position
-    const mouseX = event.clientX;
-    const mouseY = event.clientY - programContainer.getBoundingClientRect().top;
-
-    // Update the position of the circle element to follow the cursor
-    dragButton.style.left = mouseX + "px";
-    dragButton.style.top = mouseY + "px";
-  }
+  mouseX = event.clientX;
+  mouseY = event.clientY;
 });
+
+// Start the animation loop
+updateCirclePosition();
 
 document.addEventListener("mouseup", () => {
   isHorizontalScrolling = false;
