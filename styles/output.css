@@ -568,6 +568,10 @@ video {
   }
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
 .fixed {
   position: fixed;
 }
@@ -1053,6 +1057,10 @@ video {
   cursor: pointer;
 }
 
+.cursor-grab {
+  cursor: grab;
+}
+
 .list-none {
   list-style-type: none;
 }
@@ -1441,6 +1449,10 @@ video {
   line-height: 90%;
 }
 
+.leading-\[10px\] {
+  line-height: 10px;
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1726,5 +1738,14 @@ video {
 
   .lg\:text-\[56px\] {
     font-size: 56px;
+  }
+
+  .lg\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  .lg\:leading-\[125\%\] {
+    line-height: 125%;
   }
 }

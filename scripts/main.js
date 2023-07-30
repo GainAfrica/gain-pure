@@ -48,9 +48,8 @@ programContainer.addEventListener("mousedown", (event) => {
 
 // get the drag button to appear anywhere on the program container
 programContainer.addEventListener("click", (e) => {
-  let style = getComputedStyle(programContainer);
-  const left =
-    e.clientX - parseInt(style.marginLeft) - 20 + programContainer.scrollLeft;
+  // let style = getComputedStyle(programContainer);
+  const left = e.clientX;
   const right = e.clientY - programContainer.getBoundingClientRect().top;
   dragButton.style.left = `${left}px`;
   dragButton.style.top = `${right}px`;
@@ -65,7 +64,32 @@ document.addEventListener("mousedown", (event) => {
     isHorizontalScrolling = true;
     initialX = event.clientX;
     initialScrollLeft = programContainer.scrollLeft;
+
     event.preventDefault(); // prevent text selection while dragging
+  }
+});
+
+window.addEventListener("wheel", (event) => {
+  if (isWithinHorizontalSection(event.clientX, event.clientY)) {
+    // Get the cursor position
+    const mouseX = event.clientX;
+    const mouseY = event.clientY - programContainer.getBoundingClientRect().top;
+
+    // Update the position of the circle element to follow the cursor
+    dragButton.style.left = mouseX + "px";
+    dragButton.style.top = mouseY + "px";
+  }
+});
+
+document.addEventListener("mousemove", (event) => {
+  if (isWithinHorizontalSection(event.clientX, event.clientY)) {
+    // Get the cursor position
+    const mouseX = event.clientX;
+    const mouseY = event.clientY - programContainer.getBoundingClientRect().top;
+
+    // Update the position of the circle element to follow the cursor
+    dragButton.style.left = mouseX + "px";
+    dragButton.style.top = mouseY + "px";
   }
 });
 

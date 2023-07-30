@@ -18,7 +18,9 @@
     >
       <div class="container mx-auto flex justify-between items-center gap-5">
         <div class="w-[150px]">
-          <img src="/assets/svgs/logo.svg" alt="logo" class="w-full" />
+          <a href="/">
+            <img src="/assets/svgs/logo.svg" alt="logo" class="w-full" />
+          </a>
         </div>
 
         <nav class="lg:block hidden">
@@ -78,7 +80,7 @@
         </video>
       </div>
       <div
-        class="h-screen flex flex-col-reverse sm:flex-row gap-10 gap-y-20 justify-between pb-10 pt-36 items-start sm:items-end"
+        class="h-screen container mx-auto flex flex-col-reverse sm:flex-row gap-10 gap-y-20 justify-between pb-10 pt-36 items-start sm:items-end"
       >
         <a href="#whatweare">
           <img
@@ -219,7 +221,7 @@
             <div class="max-w-3xl mx-auto">
               <p class="text-base leading-5 mb-12">THE UMBRELLA</p>
               <p
-                class="text-3xl lg:text-5xl leading-[125%] mb-11 max-w-[720px]"
+                class="text-3xl lg:text-5xl leading-[125%] lg:leading-[125%] mb-11 max-w-[720px]"
               >
                 LEAP in me which stands for Leadership Entrepreneurship Academic
                 Program: Inspire, Nurture, Mentor, Empower.
@@ -251,16 +253,16 @@
           </div>
         </div>
 
-        <div class="pl-5" id="program">
+        <div class="pl-5 relative cursor-grab" id="program">
+          <div
+            class="absolute w-28 h-28 bg-gray-200 text-black font-semibold uppercase left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-10 rounded-full text-center leading-[112px] cursor-grabbing drag-button pointer-events-none"
+          >
+            Drag
+          </div>
           <div
             class="flex gap-6 overflow-hidden overflow-x-scroll mb-24 program-container relative"
             id="program-container"
           >
-            <div
-              class="absolute w-28 h-28 bg-gray-200 text-black font-semibold uppercase left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-10 rounded-full text-center leading-[112px] cursor-grabbing drag-button"
-            >
-              Drag
-            </div>
             <div
               class="bg-orange px-5 py-10 relative min-w-[400px] lg:min-w-[500px]"
             >
@@ -393,10 +395,6 @@
       <div class="container mx-auto mt-36">
         <p class="mb-16 text-sm">TESTIMONIALS</p>
         <h1 class="heading max-w-2xl mb-28">Here’s what people have to say</h1>
-        <p class="text-3xl lgtext-5xl leading-[125%] mb-20 max-w-4xl ml-auto">
-          LEAP in me which stands for Leadership Entrepreneurship Academic
-          Program: Inspire, Nurture, Mentor, Empower.
-        </p>
 
         <div class="md:flex mb-44 justify-between gap-6 items-start">
           <div
