@@ -236,5 +236,52 @@ const observer = new IntersectionObserver((entries) => {
 titleElement.forEach((element) => {
   observer.observe(element);
 });
-// observer.observe(titleElement);
-// observer.observe(paragraphElement);
+
+const overlayBtn = document.querySelector(".overlay-btn");
+
+overlayBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector(".overlay").style.display = "block";
+});
+
+const exitBtn = document.querySelector(".exit-btn");
+console.log(exitBtn);
+
+exitBtn.addEventListener("click", () => {
+  console.log("exit");
+  document.querySelector(".overlay").style.display = "none";
+});
+
+const links = document.querySelectorAll("a");
+
+function onLinkHover() {
+  dragButton.style.backgroundColor = "rgba(0,0,0,0.5)";
+  dragButton.style.width = "10px";
+  dragButton.style.height = "10px";
+  dragButton.textContent = "";
+}
+
+// Function to reset circle properties when a link is not hovered
+function onLinkHoverOut() {
+  dragButton.style.backgroundColor = "rgb(229, 231, 235)";
+  dragButton.style.width = "112px";
+  dragButton.style.height = "112px";
+  dragButton.textContent = "DRAG";
+}
+
+links.forEach((link) => {
+  link.addEventListener("mouseenter", onLinkHover);
+  link.addEventListener("mouseleave", () => {
+    setTimeout(() => {
+      onLinkHoverOut();
+    }, 1000);
+  });
+  link.addEventListener("mousemove", onLinkHover);
+});
+
+// Add a global mousemove event to reset circle properties when the cursor is not over any link
+document.addEventListener("mousemove", (event) => {
+  if (!Array.from(links).some((link) => link.contains(event.target))) {
+    onLinkHoverOut();
+  }
+});

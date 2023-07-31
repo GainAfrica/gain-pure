@@ -302,3 +302,8 @@ video {
   opacity: 1;
   transform: translateY(0);
 }
+
+.overlay-image {
+  background: url("/assets/images/overlay.png") no-repeat center center;
+  background-size: cover;
+}
