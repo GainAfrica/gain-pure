@@ -676,6 +676,26 @@ video {
   top: 0.75rem;
 }
 
+.right-3 {
+  right: 0.75rem;
+}
+
+.-bottom-6 {
+  bottom: -1.5rem;
+}
+
+.bottom-6 {
+  bottom: 1.5rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.-bottom-12 {
+  bottom: -3rem;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -1159,6 +1179,10 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.cursor-auto {
+  cursor: auto;
 }
 
 .list-none {

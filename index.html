@@ -267,30 +267,31 @@
 
         <div class="pl-5 relative cursor-grab overflow-hidden" id="program">
           <div
-            class="absolute w-28 h-28 bg-gray-200 text-black font-semibold uppercase left-[50%] top-[50%] translate-x-[-50%] z-10 translate-y-[-50%] rounded-full text-center leading-[112px] cursor-grabbing drag-button transition-normal pointer-events-none"
+            class="absolute w-28 h-28 bg-gray-200 text-black font-semibold uppercase left-[50%] top-[50%] translate-x-[-50%] z-10 translate-y-[-50%] rounded-full text-center leading-[112px] cursor-grabbing drag-button pointer-events-none"
           >
             Drag
           </div>
           <div
-            class="overlay hidden h-screen bg-faded w-full top-0 left-0 fixed z-[70]"
+            class="overlay hidden h-screen bg-faded w-full top-0 left-0 fixed z-[70] cursor-auto"
           >
             <div
-              class="absolute top-3 left-3 sm:top-5 sm:right-5 w-[95%] md:w-[70%] bg-white min-h-[90vh]"
+              class="absolute top-3 right-3 sm:top-5 sm:right-5 w-[95%] md:w-[70%] bg-white min-h-[90vh]"
             >
-              <div class="w-full h-[30vh] relative overlay-image"></div>
-              <img
-                src="/assets/svgs/exit.svg"
-                alt=""
-                class="absolute top-9 right-9 exit-btn z-50"
-              />
-              <div
-                class="lg:p-14 md:p-10 p-5 text-black relative overflow-y-scroll"
-              >
+              <div class="w-full h-[30vh] relative overlay-image">
+                <img
+                  src="/assets/svgs/exit.svg"
+                  alt=""
+                  class="absolute top-9 right-9 exit-btn z-50 cursor-pointer"
+                />
                 <h1
-                  class="absolute z-50 -top-6 lg:left-14 md:left-10 left-5 font-dharma uppercase text-5xl mb-8 max-w-[440px]"
+                  class="absolute z-50 -bottom-6 lg:left-14 md:left-10 left-5 font-dharma uppercase text-5xl max-w-[440px] text-black"
                 >
                   03
                 </h1>
+              </div>
+              <div
+                class="lg:p-14 md:p-10 p-5 text-black relative overflow-y-scroll"
+              >
                 <h1 class="font-dharma uppercase text-7xl mb-8 max-w-[440px]">
                   Public school Tutorship
                 </h1>

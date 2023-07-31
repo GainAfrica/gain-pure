@@ -218,6 +218,8 @@ updateGalleryBar();
 
 // Get the elements to animate
 const titleElement = document.querySelectorAll(".fade-up");
+// Create a variable to store the previous scrollY position
+let prevScrollY = window.scrollY;
 
 // Create the intersection observer
 const observer = new IntersectionObserver((entries) => {
@@ -227,10 +229,24 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.add("animate");
     } else {
       // If the element is not in the viewport, remove the animation class
-      entry.target.classList.remove("animate");
+      // entry.target.classList.remove("animate");
     }
   });
 });
+
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       // Scrolling down
+//       if (window.scrollY > prevScrollY) {
+//         // Start the animation loop when the element enters the viewport
+//         entry.target.classList.add("animate");
+//         requestAnimationFrame(updateCirclePosition);
+//       }
+//     }
+//     prevScrollY = window.scrollY;
+//   });
+// });
 
 // Observe the elements
 titleElement.forEach((element) => {
