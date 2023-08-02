@@ -9,8 +9,6 @@ module.exports = {
   theme: {
     fontFamily: {
       dharma: ["Dharma Gothic E", "sans-serif"],
-      pplight: ["Formula Condensed Light", "sans-serif"],
-      ppbold: ["Formula Condensed Bold", "sans-serif"],
       ppmontreal: ["PP Neue Montreal Book", "sans-serif"],
     },
     extend: {
