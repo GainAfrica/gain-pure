@@ -155,12 +155,15 @@
     </header>
 
     <section class="hero min-h-screen relative px-5 overflow-hidden">
-      <div id="background">
+      <div
+        class="background w-full left-0 top-0 h-full -z-10 overflow-hidden absolute bg-[#252121] m-0"
+      >
         <video
           src="/assets/videos/hero-video.mp4"
           autoplay="autoplay"
           loop="loop"
           muted="muted"
+          class="video w-full h-full m-0 p-0"
         >
           Your browser is not supported
         </video>
@@ -1089,7 +1092,6 @@
       async
     ></script>
     <script src="/scripts/base.js"></script>
-    <script src="/scripts/hero.js"></script>
     <script src="/scripts/main.js"></script>
   </body>
 </html>
