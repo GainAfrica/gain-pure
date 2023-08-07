@@ -4,6 +4,7 @@ module.exports = {
   content: [
     "./*.{html,js}",
     "./about/**/*.{html,js}",
+    "./team/**/*.{html,js}",
     "./error/**/*.{html,js}",
   ],
   theme: {
