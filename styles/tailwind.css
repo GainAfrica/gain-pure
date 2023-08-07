@@ -11,21 +11,21 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .heading-main {
-    @apply text-[100px];
-  }
-
   .heading {
     @apply text-7xl;
+  }
+
+  .heading-main {
+    @apply text-[100px];
   }
 }
 
 @media screen and (max-width: 768px) {
-  .heading-main {
-    @apply text-[80px];
-  }
-
   .heading {
     @apply text-5xl;
+  }
+
+  .heading-main {
+    @apply text-[80px];
   }
 }
