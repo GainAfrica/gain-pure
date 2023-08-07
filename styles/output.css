@@ -1298,7 +1298,7 @@ video {
   background-color: rgba(0, 0, 0, 0.40);
 }
 
-.bg-faded-white {
+.bg-faded-white-100 {
   background-color: rgba(255, 255, 255, 0.10);
 }
 
@@ -1335,10 +1335,6 @@ video {
 .bg-yellow {
   --tw-bg-opacity: 1;
   background-color: rgb(238 185 49 / var(--tw-bg-opacity));
-}
-
-.bg-faded-white-100 {
-  background-color: rgba(255, 255, 255, 0.10);
 }
 
 .p-0 {
