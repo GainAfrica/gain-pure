@@ -120,10 +120,6 @@
   }
 }
 
-.transition-normal {
-  transition: all 3s ease;
-}
-
 .gallery-image {
   height: 500px;
   aspect-ratio: 16/9;
@@ -244,7 +240,48 @@ video {
   transform: translateY(0);
 }
 
-.overlay-image {
+.overlay-image-1 {
   background: url("/assets/images/overlay.png") no-repeat center center;
   background-size: cover;
+}
+
+.overlay-image-2 {
+  background: url("/assets/images/program-4.png") no-repeat center center;
+  background-size: cover;
+}
+
+.overlay-1.show {
+  pointer-events: auto;
+  transform: translateX(0%);
+}
+
+.overlay-1.show .overlay-box-1 {
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.overlay-1 .overlay-box-1 {
+  transform: scale(0);
+}
+
+.overlay-2.show {
+  pointer-events: auto;
+  transform: translateX(0%);
+}
+
+.overlay-2.show .overlay-box-2 {
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.overlay-2 .overlay-box-2 {
+  transform: scale(0);
+}
+
+.transition-normal {
+  transition: all 0.3s ease;
+}
+
+.transition-slow {
+  transition: all 0.5s ease-in-out;
 }

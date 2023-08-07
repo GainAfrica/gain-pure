@@ -253,19 +253,31 @@ titleElement.forEach((element) => {
   observer.observe(element);
 });
 
-const overlayBtn = document.querySelector(".overlay-btn");
+const overlayBtn1 = document.querySelector(".overlay-btn-1");
+const overlayBtn2 = document.querySelector(".overlay-btn-2");
+const exitBtn1 = document.querySelector(".exit-btn-1");
+const exitBtn2 = document.querySelector(".exit-btn-2");
 
-overlayBtn.addEventListener("click", (e) => {
+overlayBtn1.addEventListener("click", (e) => {
   e.preventDefault();
-  document.querySelector(".overlay").style.display = "block";
+  // document.querySelector(".overlay-1").style.display = "block";
+  document.querySelector(".overlay-1").classList.add("show");
 });
 
-const exitBtn = document.querySelector(".exit-btn");
-console.log(exitBtn);
+overlayBtn2.addEventListener("click", (e) => {
+  e.preventDefault();
+  // document.querySelector(".overlay-2").style.display = "block";
+  document.querySelector(".overlay-2").classList.add("show");
+});
 
-exitBtn.addEventListener("click", () => {
-  console.log("exit");
-  document.querySelector(".overlay").style.display = "none";
+exitBtn1.addEventListener("click", () => {
+  // document.querySelector(".overlay-1").style.display = "none";
+  document.querySelector(".overlay-1").classList.remove("show");
+});
+
+exitBtn2.addEventListener("click", () => {
+  // document.querySelector(".overlay-2").style.display = "none";
+  document.querySelector(".overlay-2").classList.remove("show");
 });
 
 const links = document.querySelectorAll("a");
