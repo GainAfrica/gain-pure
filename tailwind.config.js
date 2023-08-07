@@ -1,12 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: [
-    "./*.{html,js}",
-    "./about/**/*.{html,js}",
-    "./team/**/*.{html,js}",
-    "./error/**/*.{html,js}",
-  ],
+  content: ["./*.{html,js}", "./about/**/*.{html,js}", "./team/**/*.{html,js}"],
   theme: {
     fontFamily: {
       dharma: ["Dharma Gothic E", "sans-serif"],
@@ -24,6 +19,16 @@ module.exports = {
         faded: "rgba(0, 0, 0, 0.40)",
         "faded-100": "rgba(0, 0, 0, 0.10)",
         "faded-white": "rgba(255, 255, 255, 0.10)",
+        faded: {
+          white: {
+            100: "rgba(255, 255, 255, 0.10)",
+            800: "rgba(255, 255, 255, 0.80)",
+          },
+          black: {
+            100: "rgba(0, 0, 0, 0.10)",
+            400: "rgba(0, 0, 0, 0.40)",
+          },
+        },
       },
     },
   },
