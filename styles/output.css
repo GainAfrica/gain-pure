@@ -1075,6 +1075,10 @@ video {
   max-width: 28rem;
 }
 
+.max-w-xl {
+  max-width: 36rem;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1187,6 +1191,10 @@ video {
 
 .gap-\[6px\] {
   gap: 6px;
+}
+
+.gap-0 {
+  gap: 0px;
 }
 
 .gap-x-20 {
@@ -1821,6 +1829,10 @@ video {
 
   .lg\:flex-1 {
     flex: 1 1 0%;
+  }
+
+  .lg\:flex-auto {
+    flex: 1 1 auto;
   }
 
   .lg\:flex-nowrap {
