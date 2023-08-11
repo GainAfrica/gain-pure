@@ -1094,6 +1094,14 @@ video {
   max-width: 28rem;
 }
 
+.max-w-\[262px\] {
+  max-width: 262px;
+}
+
+.max-w-\[200px\] {
+  max-width: 200px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1562,6 +1570,10 @@ video {
 
 .leading-\[90\%\] {
   line-height: 90%;
+}
+
+.leading-\[140\%\] {
+  line-height: 140%;
 }
 
 .text-black {

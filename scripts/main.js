@@ -202,34 +202,45 @@ prevBtn.addEventListener("click", () => {
 // // ####################################
 
 // gallery section
-const gallery = document.getElementById("gallery");
-const galleryContainer = document.getElementById("gallery-container");
-const galleryNextBtn = document.querySelector(".gallery-next-btn");
-const galleryPrevBtn = document.querySelector(".gallery-prev-btn");
-
-galleryNextBtn.addEventListener("click", () => {
-  galleryContainer.scrollLeft += 800;
+const swiper = new Swiper(".mySwiper", {
+  // effect: "fade",
+  // fadeEffect: {
+  //   crossFade: true,
+  // },
+  // slidesPerView: 4,
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
+  // loop: true,
+  // centeredSlides: true,
+  // centeredSlidesBounds: true,
+  // spaceBetween: 80,
+  grabCursor: true,
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+  },
 });
-
-galleryPrevBtn.addEventListener("click", () => {
-  galleryContainer.scrollLeft -= 800;
-});
-
-// function to update the progress bar for gallery section based on scroll position
-function updateGalleryBar() {
-  const galleryBarFill = document.getElementById("gallery-bar-fill");
-
-  const scrollPercentage =
-    (galleryContainer.scrollLeft /
-      (galleryContainer.scrollWidth - galleryContainer.clientWidth)) *
-    100;
-
-  const galleryBarFillPosition = scrollPercentage * 0.8;
-  galleryBarFill.style.left = galleryBarFillPosition + "%";
-}
-
-galleryContainer.addEventListener("scroll", updateGalleryBar);
-updateGalleryBar();
 
 // // ####################################
 

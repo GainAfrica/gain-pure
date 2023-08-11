@@ -48,6 +48,12 @@
       src="https://kit.fontawesome.com/8e4fb64db4.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </head>
 
   <body class="font-ppmontreal">
@@ -605,7 +611,7 @@
         <p class="mb-16 text-sm">TESTIMONIALS</p>
         <h1 class="heading max-w-2xl mb-28">Here’s what people have to say</h1>
 
-        <div class="md:flex mb-44 justify-between gap-6 items-start">
+        <div class="testimonial-container">
           <div
             class="w-64 flex gap-3 items-center md:mb-0 mb-16 whitespace-nowrap"
           >
@@ -624,146 +630,260 @@
               class="w-10 h-10 cursor-pointer next-btn"
             />
           </div>
-
-          <div class="max-w-4xl w-full">
-            <div class="testimonial-container">
-              <div class="testimonial">
-                <div class="flex gap-6 mb-12 items-center">
-                  <img
-                    src="/assets/images/testimonial-1.jpg"
-                    alt="testimonial-image"
-                    class="w-24 h-24 rounded-full"
-                  />
-
-                  <div>
-                    <p class="text-lg">Ogiogwa Osionela</p>
-                    <p class="text-sm text-faded">Student, AAMU</p>
-                  </div>
-                </div>
-                <hr class="bg-faded-100 w-full p-[0.5px]" />
-                <p class="text-lg mt-9">
-                  “GAIN is an incredible organization that is committed to
-                  fostering global education by supporting and offering a range
-                  of global opportunities to students. When I enrolled in the
-                  program, I received invaluable assistance and lessons from the
-                  tutor in preparing for international exams like SAT, TOEFL,
-                  navigating the application process, and preparing my mindset
-                  for success. The leader of the program, Mr Temitope Fashakin
-                  not just provided the opportunity, but also offered support
-                  mentally, and in preparing for my visa interview, equipping me
-                  with the skills needed for success. I secured admission to a
-                  U.S. university with a full ride scholarship valued at
-                  approximately $100,000. ”
+          <div class="mb-20 testimonial">
+            <div class="lg:flex justify-between gap-10 md:mb-52 mb-24">
+              <p class="lg:min-w-[300px] mb-10 lg:mb-0">Testimonials</p>
+              <p class="max-w-[827px] text-lg leading-[140%]">
+                “I am Osionela Josephine OGIOGWA, a native of the Afemai tribe
+                in Edo State, Nigeria. I come from a family of 2, myself being
+                the first born. After high school, I enrolled in the Cambridge
+                Advanced Level program for a year. I came in contact with Mr
+                Temitope Fashakin in 2022. Knowing him has been a blessing to my
+                academic life. He took an interest in me cause I had good grades
+                in high school and the A Levels program; he believed that I have
+                what it takes to go to school in the United States of America.
+                (I had 3A*s in the October/ November 2021 Cambridge Advanced
+                Level examination in Biology, Chemistry and Physics
+                respectively). The process all started under Qpat Solutions
+                Limited, a company founded by Mr Temitope Fashakin under the
+                umbrella organization,GAIN(Giving Aid International Network), a
+                nongovernmental organization that invests in the academic life
+                of young students in high school and university. This program
+                took care of my SAT by paying for the test and also by tutoring
+                me for the test. I had a total of 1410 at the end of the test.
+                During my time with Qpat solutions,I was assisted with my
+                application to six schools. I had English study sessions with
+                excellent English Language teachers who helped to make my
+                college essay perfect and presentable. At the end of it all, I
+                gained admission to three schools with scholarships to two.
+                Without the help of this organization, I wouldn't have been able
+                to fulfill my dream of studying in the United States as a lot of
+                steps require guidance. Words can't explain my feelings of
+                gratitude for the academic help rendered to me through Qpat
+                solutions, the financial help from GAIN and the mentoring help
+                from Mr. Temitope Fashakin and his crew. God bless you all. It
+                has been an amazing journey so far and I look forward to what
+                the Lord has in store for me.”
+              </p>
+            </div>
+            <div class="md:flex justify-between gap-10">
+              <div class="md:max-w-[300px] max-w-[400px] mb-10 md:mb-0">
+                <img
+                  src="/assets/images/onela.jpg"
+                  alt="founder-image"
+                  class="w-full founder-image"
+                />
+              </div>
+              <div class="md:w-[827px]">
+                <p
+                  class="font-dharma uppercase text-3xl md:text-6xl leading-[90%] md:mb-6 mb-3 mr-auto max-w-[200px]"
+                >
+                  Osionela Ogiogwa
                 </p>
               </div>
+            </div>
+          </div>
 
-              <div class="testimonial">
-                <div class="flex gap-6 mb-12 items-center">
-                  <img
-                    src="/assets/images/profile.png"
-                    alt="testimonial-image"
-                    class="w-24 h-24 rounded-full"
-                  />
-                  <div>
-                    <p class="text-lg">Kehinde Ezekiel</p>
-                    <p class="text-sm text-faded">
-                      Ph.D, Scripps Research Institute
-                    </p>
-                  </div>
-                </div>
-                <hr class="bg-faded-100 w-full p-[0.5px]" />
-                <p class="text-lg mt-9">
-                  “I am Kehinde Ezekiel, and I hail from Lagos State, Nigeria.
-                  Currently, I am a Ph.D. student at Scripps Research Institute.
-                  From a young age, I had always envisioned the dreams of being
-                  the best I could be in whatever I find myself doing; which
-                  fueled my determination to excel in my secondary school
-                  studies and eventually secure 8As and 1B in my WASSCE exams.
-                  My results and dedicated actions paved the way for me to
-                  achieve my global educational aspirations when I learned about
-                  the Giving Aid International Network (GAIN). GAIN became a
-                  pivotal force in shaping my academic pursuit. ”
+          <div class="mb-20 testimonial">
+            <div class="lg:flex justify-between gap-10 md:mb-52 mb-24">
+              <p class="lg:min-w-[300px] mb-10 lg:mb-0">Testimonials</p>
+              <p class="max-w-[827px] text-lg leading-[140%]">
+                “My name is Terence Oscar-Okpala I am currently a sophomore at
+                Bethune Cookman University studying Chemistry. I grew up with 2
+                siblings in the city of Ibadan, Nigeria. I developed a love for
+                science and Chemistry in high school which pushed me to explore
+                tertiary education at universities outside my native country. I
+                attended Oritamefa Baptist Model School for my secondary
+                education and pursued a Cambridge Advanced Level Certificate at
+                the same school. My experience at the college sparked my
+                interest in the possibilities of tertiary education aboard and
+                encouraged me to take on the SAT and IELTS examinations to
+                improve my odds. After completing my certificate and while
+                working in my Advanced Level College, a lecturer introduced to
+                Mr Fashakin and his organization, Giving Aids International
+                Network. In my first conversation with him, I got to witness his
+                infectious determination and ambition in my future which further
+                gave my family and I confidence to go through and complete the
+                process of application. I was given admission two weeks after
+                but had a long and scary wait to find out if I could get a
+                Presidential Scholarship which would determine if I could
+                attend. Throughout the excruciating process, the words of
+                encouragement from Mr Fashakin even after I had begun to lose
+                confidence in myself were inspiring to me and with his help, I
+                was able to not only able to gain admission but also a
+                Presidential Scholarship to fund my studies. Mr Fashakin’s
+                support did not end here as he continued to provide active
+                assistance through the visa procedures and aided me in
+                preparation for my visa interview as well as my travel
+                preparations. When I arrived at the US, Mr Fashakin took time
+                out of his busy schedule to meet me at the airport, show me
+                around and help me to get acclimated to my new surrounding
+                making my transition all that much easier. Since the first time
+                I stepped foot in the US till now he has never stopped sharing
+                support and advice at every turn of my academics which have been
+                pivotal to my stay and academic performance. The most comforting
+                part of my experience with Mr Fashakin is that he has changed my
+                mentality about success. I used to think success is a race but I
+                realize that It is a marathon with different stages and Mr
+                Fashakin’s love for helping the youths of Nigeria and building
+                successful youths that society can be proud of has convinced me
+                that he would be supporting me and every youth he interacts with
+                through every stage of the marathon to success.”
+              </p>
+            </div>
+            <div class="md:flex justify-between gap-10">
+              <div class="md:max-w-[300px] max-w-[400px] mb-10 md:mb-0">
+                <img
+                  src="/assets/images/oscar.jpg"
+                  alt="founder-image"
+                  class="w-full founder-image"
+                />
+              </div>
+              <div class="md:w-[827px]">
+                <p
+                  class="font-dharma uppercase text-3xl md:text-6xl leading-[90%] md:mb-6 mb-3 mr-auto max-w-[200px]"
+                >
+                  Terence Oscar-Okpala
                 </p>
               </div>
+            </div>
+          </div>
 
-              <div class="testimonial">
-                <div class="flex gap-6 mb-12 items-center">
-                  <img
-                    src="/assets/images/testimonial-2.jpg"
-                    alt="testimonial-image"
-                    class="w-24 h-24 rounded-full"
-                  />
-                  <div>
-                    <p class="text-lg">Divine Micheals</p>
-                    <p class="text-sm text-faded">
-                      Ph.D, Scripps Research Institute
-                    </p>
-                  </div>
-                </div>
-                <hr class="bg-faded-100 w-full p-[0.5px]" />
-                <p class="text-lg mt-9">
-                  “Throughout my four year journey in college, GAIN continued to
-                  be a pillar of support, offering valuable academic advice,
-                  assistance, and guidance in adapting to the new environment.
-                  GAIN also empowered me to pay it forward by helping other
-                  students who were preparing to study abroad, as well as
-                  students who came after me through mentorship and career
-                  guidance. Witnessing these students secure internships and
-                  excel in their pursuits after the guidance I provided fills me
-                  with immense joy and pride”
+          <div class="mb-20 testimonial">
+            <div class="lg:flex justify-between gap-10 md:mb-52 mb-24">
+              <p class="lg:min-w-[300px] mb-10 lg:mb-0">Testimonials</p>
+              <p class="max-w-[827px] text-lg leading-[140%]">
+                “I am Kehinde Ezekiel, and I hail from Lagos State, Nigeria.
+                Currently, I am a Ph.D. student at Scripps Research Institute.
+                From a young age, I had always envisioned the dreams of being
+                the best I could be in whatever I find myself doing; which
+                fueled my determination to excel in my secondary school studies
+                and eventually secure 8As and 1B in my WASSCE exams. My results
+                and dedicated actions paved the way for me to achieve my global
+                educational aspirations when I learned about the Giving Aid
+                International Network (GAIN). GAIN became a pivotal force in
+                shaping my academic pursuit. GAIN is an incredible organization
+                that is committed to fostering global education by supporting
+                and offering a range of global opportunities to students. When I
+                enrolled in the program, I received invaluable assistance and
+                lessons from the tutor in preparing for international exams like
+                SAT, TOEFL, navigating the application process, and preparing my
+                mindset for success. The leader of the program, Mr Temitope
+                Fashakin not just provided the opportunity, but also offered
+                support mentally, and in preparing for my visa interview,
+                equipping me with the skills needed for success. I secured
+                admission to a U.S. university with a full ride scholarship
+                valued at approximately $100,000. Throughout my four year
+                journey in college, GAIN continued to be a pillar of support,
+                offering valuable academic advice, assistance, and guidance in
+                adapting to the new environment. GAIN also empowered me to pay
+                it forward by helping other students who were preparing to study
+                abroad, as well as students who came after me through mentorship
+                and career guidance. Witnessing these students secure
+                internships and excel in their pursuits after the guidance I
+                provided fills me with immense joy and pride I am deeply
+                grateful for the world-class experience that GAIN has provided
+                me which has set a strong foundation for various aspects of my
+                life. As I continue my academic pursuits, I find great joy in
+                paying it forward by mentoring and guiding other students, just
+                as GAIN did for me. I am excited to see how their impact
+                continues to enrich the lives of other aspiring students around
+                the world.”
+              </p>
+            </div>
+            <div class="md:flex justify-between gap-10">
+              <div class="md:max-w-[300px] max-w-[400px] mb-10 md:mb-0">
+                <img
+                  src="/assets/images/kehinde.jpg"
+                  alt="founder-image"
+                  class="w-full founder-image"
+                />
+              </div>
+              <div class="md:w-[827px]">
+                <p
+                  class="font-dharma uppercase text-3xl md:text-6xl leading-[90%] md:mb-6 mb-3 mr-auto max-w-[200px]"
+                >
+                  Kehinde Ezekiel
                 </p>
               </div>
+            </div>
+          </div>
 
-              <div class="testimonial">
-                <div class="flex gap-6 mb-12 items-center">
-                  <img
-                    src="/assets/images/profile.png"
-                    alt="testimonial-image"
-                    class="w-24 h-24 rounded-full"
-                  />
-                  <div>
-                    <p class="text-lg">Emmanuel Aina</p>
-                    <p class="text-sm text-faded">Student</p>
-                  </div>
-                </div>
-                <hr class="bg-faded-100 w-full p-[0.5px]" />
-                <p class="text-lg mt-9">
-                  “ I am deeply grateful for the world-class experience that
-                  GAIN has provided me which has set a strong foundation for
-                  various aspects of my life. As I continue my academic
-                  pursuits, I find great joy in paying it forward by mentoring
-                  and guiding other students, just as GAIN did for me. I am
-                  excited to see how their impact continues to enrich the lives
-                  of other aspiring students around the world.”
+          <div class="mb-20 testimonial">
+            <div class="lg:flex justify-between gap-10 md:mb-52 mb-24">
+              <p class="lg:min-w-[300px] mb-10 lg:mb-0">Testimonials</p>
+              <p class="max-w-[827px] text-lg leading-[140%]">
+                “My name is Moyinoluwa Adelowo, and I was born and raised in
+                Nigeria. I met Mr. Fashakin after my Advanced Level Program
+                through the help of one of my teachers and it has been a
+                blessing for me to know him. Mr. Fashakin is the CEO of Giving
+                Aid International Network (GAIN) Africa and QPAT Solutions. GAIN
+                Africa is a non-governmental association committed to assisting
+                students with their education and offering global opportunities
+                to students. When he saw my Cambridge Advanced level
+                result(3A*’s) and my WASSCE Result (8A1’s and 1B#), he became
+                interested in my education, knowing I could do more if given the
+                chance. He reached out to me regarding my plans after A’levels,
+                which I told him was to apply to schools in the U.S. GAIN Africa
+                sponsored me to access the resources and services of its partner
+                organization, QPAT Solutions. The process started with
+                preparation to retake the SAT. GAIN sponsored the exam fee and
+                QPAT provided us with resources to study for the SAT. I had a
+                score of 1470 on the exam. After the exams, I had many coaching
+                sessions in preparation to start our applications to schools and
+                prepare for writing essays. I had access to different resources
+                and people dedicated to assisting us through the process. I
+                applied to several schools of which I was accepted to a few and
+                got a full-ride scholarship from one worth over $100,000. Then
+                Mr. Fashakin and his team assisted me in preparing for my visa
+                application and the visa interview. GAIN took care of the
+                financial burdens for most of these processes. I'm grateful to
+                God for meeting Mr. Fashakin. He has been a blessing to my life.
+                I'm looking forward to the next phase of my life. .”
+              </p>
+            </div>
+            <div class="md:flex justify-between gap-10">
+              <div class="md:max-w-[300px] max-w-[400px] mb-10 md:mb-0">
+                <img
+                  src="/assets/images/moyin.jpg"
+                  alt="founder-image"
+                  class="w-full founder-image"
+                />
+              </div>
+              <div class="md:w-[827px]">
+                <p
+                  class="font-dharma uppercase text-3xl md:text-6xl leading-[90%] md:mb-6 mb-3 mr-auto max-w-[200px]"
+                >
+                  Moyinoluwa Adelowo
                 </p>
               </div>
+            </div>
+          </div>
 
-              <div class="testimonial">
-                <div class="flex gap-6 mb-12 items-center">
-                  <img
-                    src="/assets/images/profile.png"
-                    alt="testimonial-image"
-                    class="w-24 h-24 rounded-full"
-                  />
-                  <div>
-                    <p class="text-lg">Oscar Terrence</p>
-                    <p class="text-sm text-faded">
-                      Student, Bethune Cookman University
-                    </p>
-                  </div>
-                </div>
-                <hr class="bg-faded-100 w-full p-[0.5px]" />
-                <p class="text-lg mt-9">
-                  “We are a worldwide network of Africans who believe in a
-                  better Africa resulting from newly empowered generation of
-                  leaders. We are a worldwide network of Africans who believe in
-                  a better. We are a worldwide network of Africans who believe
-                  in a better Africa resulting from newly empowered generation
-                  of leaders. We are a worldwide network of Africans who believe
-                  in a better. We are a worldwide network of Africans who
-                  believe in a better Africa resulting from newly empowered
-                  generation of leaders. We are a worldwide network of Africans
-                  who believe in a better.”
+          <div class="mb-20 testimonial">
+            <div class="lg:flex justify-between gap-10 md:mb-52 mb-24">
+              <p class="lg:min-w-[300px] mb-10 lg:mb-0">Testimonials</p>
+              <p class="max-w-[827px] text-lg leading-[140%]">
+                “We are out to change the game of education, leadership, and
+                investments in the society by leveraging on international and
+                local connections with professionals in various sectors. We
+                believe in supporting the smallest unit of the society: the
+                family.”
+              </p>
+            </div>
+            <div class="md:flex justify-between gap-10">
+              <div class="md:max-w-[300px] max-w-[400px] mb-10 md:mb-0">
+                <img
+                  src="/assets/images/temitope.png"
+                  alt="founder-image"
+                  class="w-full founder-image"
+                />
+              </div>
+              <div class="md:w-[827px]">
+                <p
+                  class="font-dharma uppercase text-3xl md:text-6xl leading-[90%] md:mb-6 mb-3 mr-auto max-w-[200px]"
+                >
+                  Israel Oyekan
                 </p>
               </div>
             </div>
@@ -920,63 +1040,47 @@
       </div>
     </section>
 
-    <section class="p-5 bg-white">
+    <section class="p-5 bg-white pb-20">
       <h1 class="heading text-center mt-28 mb-28">Gallery</h1>
-      <div id="gallery" class="relative whitespace-nowrap mb-32">
-        <div
-          class="gallery-prev-btn absolute left-10 top-[50%] translate-y-[-50%] bg-faded-black-400 p-5 hover:-translate-x-2 z-10 cursor-pointer transition-normal"
-        >
-          <i class="fa-solid fa-arrow-left text-lg text-white"></i>
+      <div class="swiper mySwiper" id="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/assets/images/gallery-1.png" alt="gallery-image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/gallery-2.png" alt="gallery-image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/gallery-3.png" alt="gallery-image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/program-2.png" alt="gallery-image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/umbrella.png" alt="gallery-image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/empower.png" alt="gallery-image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/program-2.png" alt="gallery-image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/program-4.png" alt="gallery-image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/gallery-2.png" alt="gallery-image" />
+          </div>
         </div>
-        <div
-          class="gallery-next-btn right-10 top-[50%] translate-y-[-50%] bg-faded-black-400 p-5 hover:translate-x-2 z-10 absolute cursor-pointer transition-normal"
-        >
-          <i class="fa-solid fa-arrow-right text-lg text-white"></i>
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="flex items-center justify-center">
+          <div class="swiper-scrollbar"></div>
         </div>
-        <div
-          class="gallery-container flex items-center gap-20 overflow-hidden overflow-x-scroll relative whitespace-nowrap"
-          id="gallery-container"
-        >
-          <img
-            src="/assets/images/gallery-2.png"
-            alt="gallery-image"
-            class="gallery-image"
-          />
-          <img
-            src="/assets/images/program-4.png"
-            alt="gallery-image"
-            class="gallery-image"
-          />
-          <img
-            src="/assets/images/program-2.png"
-            alt="gallery-image"
-            class="gallery-image"
-          />
-          <img
-            src="/assets/images/empower.png"
-            alt="gallery-image"
-            class="gallery-image"
-          />
-          <img
-            src="/assets/images/hero.png"
-            alt="gallery-image"
-            class="gallery-image"
-          />
-          <img
-            src="/assets/images/solution.png"
-            alt="gallery-image"
-            class="gallery-image"
-          />
-        </div>
-      </div>
-      <div
-        id="gallery-bar"
-        class="max-w-5xl mx-auto w-100 h-[2px] mb-32 bg-faded-100"
-      >
-        <div
-          id="gallery-bar-fill"
-          class="bg-black h-full w-[20%] relative transition-normal"
-        ></div>
       </div>
     </section>
 
