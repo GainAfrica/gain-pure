@@ -1732,6 +1732,11 @@ video {
   gap: 2rem;
 }
 
+.hover\:border-orange:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(238 99 87 / var(--tw-border-opacity));
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }

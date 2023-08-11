@@ -167,6 +167,7 @@ updateProgramBar();
 const testimonials = document.querySelectorAll(".testimonial");
 const testimonialContainer = document.querySelector(".testimonial-container");
 const testimonialNumbers = document.querySelectorAll(".testimonial-number");
+const testimonialSelectors = document.querySelectorAll(".testimonial-selector");
 const nextBtns = document.querySelectorAll(".next-btn");
 const prevBtns = document.querySelectorAll(".prev-btn");
 
@@ -201,6 +202,15 @@ prevBtns.forEach((btn) => {
     if (counter < 0) {
       counter = testimonials.length - 1;
     }
+    showTestimonial(counter);
+  });
+});
+
+testimonialSelectors.forEach((selector, index) => {
+  selector.addEventListener("click", () => {
+    const selectorNumber = selector.textContent;
+    counter = selectorNumber - 1;
+
     showTestimonial(counter);
   });
 });
