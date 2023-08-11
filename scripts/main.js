@@ -166,9 +166,9 @@ updateProgramBar();
 // testimonials section
 const testimonials = document.querySelectorAll(".testimonial");
 const testimonialContainer = document.querySelector(".testimonial-container");
-const testimonialNumber = document.querySelector(".testimonial-number");
-const nextBtn = document.querySelector(".next-btn");
-const prevBtn = document.querySelector(".prev-btn");
+const testimonialNumbers = document.querySelectorAll(".testimonial-number");
+const nextBtns = document.querySelectorAll(".next-btn");
+const prevBtns = document.querySelectorAll(".prev-btn");
 
 let counter = 0;
 showTestimonial(0);
@@ -179,24 +179,30 @@ function showTestimonial(n) {
   for (i = 0; i < testimonials.length; i++) {
     testimonials[i].style.display = "none";
   }
-  testimonialNumber.textContent = `0${n + 1}`;
+  testimonialNumbers.forEach((number) => {
+    number.textContent = `0${n + 1}`;
+  });
   testimonials[n].style.display = "block";
 }
 
-nextBtn.addEventListener("click", () => {
-  counter++;
-  if (counter > testimonials.length - 1) {
-    counter = 0;
-  }
-  showTestimonial(counter);
+nextBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    counter++;
+    if (counter > testimonials.length - 1) {
+      counter = 0;
+    }
+    showTestimonial(counter);
+  });
 });
 
-prevBtn.addEventListener("click", () => {
-  counter--;
-  if (counter < 0) {
-    counter = testimonials.length - 1;
-  }
-  showTestimonial(counter);
+prevBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    counter--;
+    if (counter < 0) {
+      counter = testimonials.length - 1;
+    }
+    showTestimonial(counter);
+  });
 });
 
 // // ####################################
