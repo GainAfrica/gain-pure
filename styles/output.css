@@ -1622,6 +1622,10 @@ video {
   transition-delay: 500ms;
 }
 
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 .heading {
   font-family: PP Formula Condensed, sans-serif;
   font-size: 8rem;

@@ -45,6 +45,16 @@
   background-color: #000;
 }
 
+.header a.partner:hover {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.header.active a.partner:hover {
+  color: #000;
+  border: 1px solid #000;
+}
+
 /* Hamburger */
 .hamburger-bar-1.translate {
   transform: translateY(0px) !important;
