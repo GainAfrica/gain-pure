@@ -1,17 +1,17 @@
 /* Declaring Custom Fonts */
 @font-face {
-  font-family: "Dharma Gothic E";
+  font-family: "PP Formula Condensed";
   font-style: normal;
   font-weight: normal;
-  /* src: url("/assets/fonts/DharmaGothicE_Heavy_R.otf") format("opentype"); */
-  src: url("/assets/fonts/FormulaCondensed-Bold.woff") format("woff");
+  src: local("PP Formula Condensed Bold"),
+    url("/assets/fonts/FormulaCondensed-Bold.woff") format("woff");
 }
 
 @font-face {
-  font-family: "PP Neue Montreal Book";
+  font-family: "PP Neue Montreal TT";
   font-style: normal;
   font-weight: normal;
-  src: local("PP Neue Montreal Book"),
+  src: local("PP Neue Montreal TT"),
     url("/assets/fonts/ppneuemontreal-book.woff") format("woff");
 }
 

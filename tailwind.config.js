@@ -4,8 +4,8 @@ module.exports = {
   content: ["./*.{html,js}", "./about/**/*.{html,js}", "./team/**/*.{html,js}"],
   theme: {
     fontFamily: {
-      dharma: ["Dharma Gothic E", "sans-serif"],
-      ppmontreal: ["PP Neue Montreal Book", "sans-serif"],
+      ppformula: ["PP Formula Condensed", "sans-serif"],
+      ppmontreal: ["PP Neue Montreal TT", "sans-serif"],
     },
     extend: {
       colors: {
