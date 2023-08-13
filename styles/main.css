@@ -188,6 +188,12 @@
   }
 }
 
+.program-image {
+  aspect-ratio: 16/12;
+  object-fit: cover;
+  -o-object-fit: cover;
+}
+
 .overlay-image-1 {
   background: url("/assets/images/overlay.png") no-repeat center center;
   background-size: cover;

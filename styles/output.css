@@ -1070,6 +1070,10 @@ video {
   max-width: 28rem;
 }
 
+.max-w-\[250px\] {
+  max-width: 250px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1086,6 +1090,10 @@ video {
 
 .translate-y-\[-50\%\] {
   --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1263,13 +1271,13 @@ video {
   border-color: rgb(238 99 87 / var(--tw-border-opacity));
 }
 
+.border-transparent {
+  border-color: transparent;
+}
+
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.border-transparent {
-  border-color: transparent;
 }
 
 .bg-\[\#252121\] {
@@ -1430,12 +1438,12 @@ video {
   text-align: right;
 }
 
-.font-ppmontreal {
-  font-family: PP Neue Montreal TT, sans-serif;
-}
-
 .font-ppformula {
   font-family: PP Formula Condensed, sans-serif;
+}
+
+.font-ppmontreal {
+  font-family: PP Neue Montreal TT, sans-serif;
 }
 
 .text-2xl {
@@ -1614,14 +1622,6 @@ video {
   transition-delay: 100ms;
 }
 
-.delay-300 {
-  transition-delay: 300ms;
-}
-
-.delay-500 {
-  transition-delay: 500ms;
-}
-
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -1744,14 +1744,14 @@ video {
   gap: 2rem;
 }
 
-.hover\:border-orange:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(238 99 87 / var(--tw-border-opacity));
-}
-
 .hover\:border-black:hover {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.hover\:border-orange:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(238 99 87 / var(--tw-border-opacity));
 }
 
 .hover\:bg-transparent:hover {
@@ -1970,6 +1970,10 @@ video {
 
   .lg\:h-\[544px\] {
     height: 544px;
+  }
+
+  .lg\:h-\[360px\] {
+    height: 360px;
   }
 
   .lg\:max-h-\[544px\] {
