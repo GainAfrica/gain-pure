@@ -196,7 +196,7 @@ const testimonialsArray = [
   {
     index: 5,
     name: "Israel Oyekan",
-    pictureSrc: "/assets/images/temitope.png",
+    pictureSrc: "/assets/images/israel.jpg",
     testimonial:
       "“We are out to change the game of education, leadership, and investments in the society by leveraging on international and    local connections with professionals in various sectors. We    believe in supporting the smallest unit of the society: the    family.”",
   },
@@ -210,8 +210,14 @@ const testimonialImage = document.querySelector(".testimonial-image");
 const testimonialText = document.querySelector(".testimonial-text");
 
 const selectTestimonial = (index) => {
+  console.log(index);
   const testimonial = testimonialsArray[index];
   testimonialName.textContent = testimonial.name;
+  if (index === 1) {
+    testimonialName.style.maxWidth = "300px";
+  } else {
+    testimonialName.style.maxWidth = "200px";
+  }
   testimonialImage.src = testimonial.pictureSrc;
   testimonialText.innerHTML = testimonial.testimonial;
 };
@@ -225,7 +231,6 @@ testimonialSelectors.forEach((selector) => {
     const number = selector.querySelector("text").textContent;
     counter = number - 1;
     selector.classList.add("active");
-
     selectTestimonial(counter);
     clearInterval(interval);
     interval = setInterval(changeTestimonial, 30000);
