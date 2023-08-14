@@ -124,8 +124,10 @@ document.addEventListener("mousemove", (event) => {
 // enable program overlay
 const overlayBtn1 = document.querySelector(".overlay-btn-1");
 const overlayBtn2 = document.querySelector(".overlay-btn-2");
+const overlayBtn3 = document.querySelector(".overlay-btn-3");
 const exitBtn1 = document.querySelector(".exit-btn-1");
 const exitBtn2 = document.querySelector(".exit-btn-2");
+const exitBtn3 = document.querySelector(".exit-btn-3");
 
 overlayBtn1.addEventListener("click", (e) => {
   e.preventDefault();
@@ -137,12 +139,23 @@ overlayBtn2.addEventListener("click", (e) => {
   document.querySelector(".overlay-2").classList.add("show");
 });
 
+overlayBtn3.addEventListener("click", (e) => {
+  console.log("clicked");
+  e.preventDefault();
+  console.log(document.querySelector(".overlay-3"));
+  document.querySelector(".overlay-3").classList.add("show");
+});
+
 exitBtn1.addEventListener("click", () => {
   document.querySelector(".overlay-1").classList.remove("show");
 });
 
 exitBtn2.addEventListener("click", () => {
   document.querySelector(".overlay-2").classList.remove("show");
+});
+
+exitBtn3.addEventListener("click", () => {
+  document.querySelector(".overlay-3").classList.remove("show");
 });
 
 // function to update the progress bar for programs section based on scroll position
@@ -210,7 +223,6 @@ const testimonialImage = document.querySelector(".testimonial-image");
 const testimonialText = document.querySelector(".testimonial-text");
 
 const selectTestimonial = (index) => {
-  console.log(index);
   const testimonial = testimonialsArray[index];
   testimonialName.textContent = testimonial.name;
   if (index === 1) {

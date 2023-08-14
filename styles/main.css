@@ -208,6 +208,11 @@
   background-size: cover;
 }
 
+.overlay-image-3 {
+  background: url("/assets/images/gal-46.jpg") no-repeat center center;
+  background-size: cover;
+}
+
 .overlay-1.show {
   pointer-events: auto;
   transform: translateX(0%);
@@ -233,6 +238,20 @@
 }
 
 .overlay-2 .overlay-box-2 {
+  transform: scale(0);
+}
+
+.overlay-3.show {
+  pointer-events: auto;
+  transform: translateX(0%);
+}
+
+.overlay-3.show .overlay-box-3 {
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.overlay-3 .overlay-box-3 {
   transform: scale(0);
 }
 
