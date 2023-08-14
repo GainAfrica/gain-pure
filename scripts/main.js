@@ -96,7 +96,7 @@ function onLinkHover() {
   dragButton.textContent = "";
 }
 
-// Function to reset circle properties when a link is not hovered
+// function to reset circle properties when a link is not hovered
 function onLinkHoverOut() {
   dragButton.style.backgroundColor = "rgb(229, 231, 235)";
   dragButton.style.width = "112px";
@@ -106,12 +106,6 @@ function onLinkHoverOut() {
 
 links.forEach((link) => {
   link.addEventListener("mouseenter", onLinkHover);
-  // link.addEventListener("mouseleave", () => {
-  //   setTimeout(() => {
-  //     onLinkHoverOut();
-  //   }, 5000);
-  // });
-  // link.addEventListener("mousemove", onLinkHover);
 });
 
 // add a global mousemove event to reset circle properties when the cursor is not over any link
@@ -237,7 +231,6 @@ const selectTestimonial = (index) => {
 selectTestimonial(0);
 
 testimonialSelectors.forEach((selector) => {
-  // const number = selector.getAttribute("data-number");
   selector.addEventListener("click", () => {
     testimonialSelectors[counter].classList.remove("active");
     const number = selector.querySelector("text").textContent;
@@ -265,30 +258,11 @@ function changeTestimonial() {
 
 // gallery section
 const swiper = new Swiper(".mySwiper", {
-  // effect: "fade",
-  // fadeEffect: {
-  //   crossFade: true,
-  // },
-  // slidesPerView: 4,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
-  // loop: true,
-  // centeredSlides: true,
-  // centeredSlidesBounds: true,
-  // spaceBetween: 80,
   grabCursor: true,
-  // pagination: {
-  //   el: ".swiper-pagination",
-  //   clickable: true,
-  // },
-  // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  // And if we need scrollbar
   scrollbar: {
     el: ".swiper-scrollbar",
   },
@@ -307,7 +281,7 @@ const swiper = new Swiper(".mySwiper", {
 // // ####################################
 
 // get the elements to animate
-const titleElement = document.querySelectorAll(".fade-up");
+const animationElements = document.querySelectorAll(".fade-up");
 
 // create the intersection observer
 const observer = new IntersectionObserver((entries) => {
@@ -315,26 +289,11 @@ const observer = new IntersectionObserver((entries) => {
     // if the element is in the viewport, add the animation class
     if (entry.isIntersecting) {
       entry.target.classList.add("animate");
-    } else {
-      // if the element is not in the viewport, remove the animation class
-      // entry.target.classList.remove("animate");
     }
   });
 });
 
 // observe the elements
-titleElement.forEach((element) => {
+animationElements.forEach((element) => {
   observer.observe(element);
 });
-
-// for touch devices
-// function is_touch_enabled() {
-//   return (
-//     "ontouchstart" in window ||
-//     navigator.maxTouchPoints > 0 ||
-//     navigator.msMaxTouchPoints > 0
-//   );
-// }
-// if (!is_touch_enabled()) {
-//   console.log("touch enabled");
-// }
