@@ -237,8 +237,25 @@
 }
 
 /* Testimonial Section */
-.testimonial {
-  animation: fade-in 1.5s;
+.testimonial-selector .number {
+  text-anchor: middle;
+}
+
+.testimonial-selector:hover .circle-bg {
+  stroke: #ee6357;
+}
+
+.testimonial-selector.active {
+  pointer-events: none;
+}
+
+.testimonial-selector.active .number {
+  fill: #000;
+}
+
+.testimonial-selector.active .circle {
+  stroke: #ee6357;
+  animation: progress 30s linear forwards;
 }
 
 /* Gallery Section */
@@ -330,5 +347,11 @@
   to {
     transform: translateX(0px);
     opacity: 1;
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
   }
 }
