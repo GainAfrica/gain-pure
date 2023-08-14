@@ -198,7 +198,7 @@ const testimonialsArray = [
     name: "Israel Oyekan",
     pictureSrc: "/assets/images/israel.jpg",
     testimonial:
-      "“We are out to change the game of education, leadership, and investments in the society by leveraging on international and    local connections with professionals in various sectors. We    believe in supporting the smallest unit of the society: the    family.”",
+      "“ I'm Israel Oyekan, and I want to share my incredible journey      with Giving Aid International Network (GAIN). GAIN has truly      been a cornerstone in my transition to higher education in the      United States. I got 8A1’s & 1B3 in WAEC and scored 1300 on the      SATs. I got an honors presidential scholarship in the United      States all thanks to the support GAIN provided me. <br /><br />      I am very grateful for the support I've received from the GAIN      program. The opportunity to connect with like-minded individuals      and driven students has been invaluable. Surrounding myself with      people who share my passion for success and who are always      willing to lend a helping hand has been instrumental in my      journey. <br /><br />      GAIN has a unique way of nurturing your dreams and helping you      transform them into reality. Mr. Temitope Fashakin’s visionary      leadership and support have created a platform where individuals      like me can thrive and positively impact society.”",
   },
 ];
 
