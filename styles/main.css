@@ -199,17 +199,17 @@
 }
 
 .overlay-image-1 {
-  background: url("/assets/images/overlay.png") no-repeat center center;
+  background: url("/assets/images/overlay-1.png") no-repeat center center;
   background-size: cover;
 }
 
 .overlay-image-2 {
-  background: url("/assets/images/program-4.png") no-repeat center center;
+  background: url("/assets/images/overlay-2.png") no-repeat center center;
   background-size: cover;
 }
 
 .overlay-image-3 {
-  background: url("/assets/images/gal-46.jpg") no-repeat center center;
+  background: url("/assets/images/overlay-3.jpg") no-repeat center center;
   background-size: cover;
 }
 

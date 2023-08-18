@@ -175,7 +175,7 @@ const testimonialsArray = [
   {
     index: 1,
     name: "Osionela Ogiogwa",
-    pictureSrc: "/assets/images/onela.jpg",
+    pictureSrc: "/assets/images/osionela.jpg",
     testimonial:
       "“I am Osionela Josephine OGIOGWA, a native of the Afemai tribe in Edo State, Nigeria. I come from a family of 2, myself being the first born. After high school, I enrolled in the Cambridge Advanced Level program for a year. <br /><br /> I came in contact with Mr Temitope Fashakin in 2022. Knowing him has been a blessing to my academic life. He took an interest  in me cause I had good grades in high school and the A Levels program; he believed that I have what it takes to go to school in the United States of <span class='dots'>...</span><span class='more'> America.  (I had 3A*s in the October/November 2021 Cambridge Advanced Level examination in Biology, Chemistry and Physics respectively). <br /><br /> The process all started under Qpat Solutions Limited, a company founded by Mr Temitope Fashakin under the umbrella organization,GAIN(Giving Aid International Network), a nongovernmental organization that invests in the academic life of young students in high school and university. This program took care of my SAT by paying for the test and also by tutoring me for the test. I had a total of 1410 at the end of the test. <br /> <br /> During my time with Qpat solutions,I was assisted with my application to six schools. I had English study sessions with excellent English Language teachers who helped to make my college essay perfect and presentable. At the end of it all, I gained admission to three schools with scholarships to two. Without the help of this organization, I wouldn't have been able to fulfill my dream of studying in the United States as a lot of steps require guidance. <br /><br /> Words can't explain my feelings of gratitude for the academic help rendered to me through Qpat solutions, the financial help from GAIN and the mentoring help from Mr. Temitope Fashakin and his crew. God bless you all. It has been an amazing journey so far and I look forward to what the Lord has in store for me.”</span> <br/><br/><button onclick='readTestimonial()' class='read-more'>Read more</button>",
   },
@@ -244,7 +244,7 @@ testimonialSelectors.forEach((selector) => {
 });
 
 // function to change the testimonial every 30 seconds
-// let interval = setInterval(changeTestimonial, 30000);
+let interval = setInterval(changeTestimonial, 30000);
 function changeTestimonial() {
   testimonialSelectors[counter].classList.remove("active");
   counter++;
