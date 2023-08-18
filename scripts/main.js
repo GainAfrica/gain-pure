@@ -284,12 +284,13 @@ const swiper = new Swiper(".mySwiper", {
 const animationElements = document.querySelectorAll(".fade-up");
 
 // create the intersection observer
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
     // if the element is in the viewport, add the animation class
     if (entry.isIntersecting) {
       entry.target.classList.add("animate");
     }
+    observer.unobserve(entry.target);
   });
 });
 
