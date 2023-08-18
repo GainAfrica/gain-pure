@@ -277,6 +277,20 @@
   animation: progress 30s linear forwards;
 }
 
+.more {
+  display: none;
+}
+
+.read-more {
+  color: #ee6357;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  text-decoration: none;
+}
+
 /* Gallery Section */
 .swiper {
   width: 100%;
