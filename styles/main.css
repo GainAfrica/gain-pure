@@ -274,7 +274,7 @@
 
 .testimonial-selector.active .circle {
   stroke: #ee6357;
-  animation: progress 30s linear forwards;
+  animation: progress 90s linear forwards;
 }
 
 .more {
