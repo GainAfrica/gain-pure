@@ -1,7 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ["./*.{html,js}", "./about/**/*.{html,js}", "./team/**/*.{html,js}"],
+  content: [
+    "./*.{html,js}",
+    "./about/**/*.{html,js}",
+    "./team/**/*.{html,js}",
+    "./partner-with-us/**/*.{html,js}",
+  ],
   theme: {
     fontFamily: {
       ppformula: ["PP Formula Condensed", "sans-serif"],
