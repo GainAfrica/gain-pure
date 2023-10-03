@@ -329,6 +329,11 @@
   transform: translateX(-50%);
 }
 
+/* Form */
+.submit-btn::before {
+  transition: all 0.3s ease;
+}
+
 /* Transitions */
 .transition-normal {
   transition: all 0.3s ease;
