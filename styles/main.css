@@ -334,6 +334,10 @@
   transition: all 0.3s ease;
 }
 
+.iti {
+  display: block !important;
+}
+
 /* Transitions */
 .transition-normal {
   transition: all 0.3s ease;

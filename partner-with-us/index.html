@@ -51,6 +51,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
   </head>
   <body class="font-ppmontreal">
     <header
@@ -168,77 +173,103 @@
         <h1
           class="font-ppformula uppercase text-center tracking-wide text-3xl md:text-6xl leading-[120%] mb-10"
         >
-          Partner Application Form
+          Membership Form
         </h1>
 
-        <form action="">
+        <form action="" class="form">
           <div class="mb-6 w-full">
-            <label for="" class="block uppercase text-lg mb-2"
+            <label for="firstName" class="block uppercase text-lg mb-2"
               >First name</label
             >
             <input
               type="text"
               class="block w-full border-b-2 border-b-black outline-none"
+              id="firstName"
             />
+            <span class="text-[13px] text-red-500 hidden"
+              >Field cannot be left blank</span
+            >
           </div>
 
           <div class="mb-6 w-full">
-            <label for="" class="block uppercase text-lg mb-2">Last name</label>
+            <label for="lastName" class="block uppercase text-lg mb-2"
+              >Last name</label
+            >
             <input
               type="text"
               class="block w-full border-b-2 border-b-black outline-none"
+              id="lastName"
             />
+            <span class="text-[13px] text-red-500 hidden"
+              >Field cannot be left blank</span
+            >
           </div>
 
           <div class="mb-6 w-full">
-            <label for="" class="block uppercase text-lg mb-2"
+            <label for="emailAddress" class="block uppercase text-lg mb-2"
               >Email address</label
             >
             <input
               type="email"
               class="block w-full border-b-2 border-b-black outline-none"
+              id="email"
             />
+            <span class="text-[13px] text-red-500 hidden"
+              >Field cannot be left blank</span
+            >
           </div>
 
           <div class="mb-6 w-full">
-            <label for="" class="block uppercase text-lg mb-2">Tel</label>
+            <label for="phoneNumber" class="block uppercase text-lg mb-2"
+              >Phone Number</label
+            >
             <input
               type="tel"
               class="block w-full border-b-2 border-b-black outline-none"
+              id="phoneNumber"
             />
+            <span class="text-[13px] text-red-500 hidden"
+              >Field cannot be left blank</span
+            >
           </div>
 
           <div class="mb-6 w-full">
-            <label for="" class="block uppercase text-lg mb-2"
+            <label for="dob" class="block uppercase text-lg mb-2"
               >Date of Birth</label
             >
             <input
               type="date"
               class="block w-full border-b-2 border-b-black outline-none"
+              id="dob"
             />
+            <span class="text-[13px] text-red-500 hidden"
+              >Field cannot be left blank</span
+            >
           </div>
 
           <div class="mb-6 w-full">
-            <label for="" class="block uppercase text-lg mb-2">Sex</label>
+            <label for="sex" class="block uppercase text-lg mb-2">Sex</label>
             <select
-              name=""
-              id=""
+              name="sex"
+              id="sex"
               class="block w-full border-b-2 border-b-black outline-none"
             >
               <option value="" selected>Select an Option</option>
               <option value="male">Male</option>
-              <option value="Female">Female</option>
-              <option value="prefer">Prefer not to say</option>
+              <option value="female">Female</option>
             </select>
+            <span class="text-[13px] text-red-500 hidden"
+              >Field cannot be left blank</span
+            >
           </div>
 
           <div class="mb-6 w-full">
-            <label for="" class="block uppercase text-lg"
+            <label for="educationLevel" class="block uppercase text-lg mb-2"
               >Current Education Level</label
             >
             <select
-              name=""
-              id=""
+              name="educationLevel"
+              id="educationLevel"
               class="block w-full border-b-2 border-b-black outline-none"
             >
               <option value="" selected>Select an Option</option>
@@ -247,16 +278,23 @@
               <option value="polytechnic">Polytechnic</option>
               <option value="university">University</option>
             </select>
+            <span class="text-[13px] text-red-500 hidden"
+              >Field cannot be left blank</span
+            >
           </div>
 
           <div class="mb-6 w-full">
-            <label for="" class="block uppercase text-lg mb-2"
+            <label for="school" class="block uppercase text-lg mb-2"
               >Current School</label
             >
             <input
               type="text"
               class="block w-full border-b-2 border-b-black outline-none"
+              id="school"
             />
+            <span class="text-[13px] text-red-500 hidden"
+              >Field cannot be left blank</span
+            >
           </div>
 
           <div>
@@ -372,5 +410,6 @@
     </footer>
 
     <script src="/scripts/base.js"></script>
+    <script src="/scripts/form.js"></script>
   </body>
 </html>
