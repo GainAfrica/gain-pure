@@ -221,15 +221,57 @@ const testimonialsArray = [
     testimonial:
       "“My name is Tomi Shittu. I was born and raised in Kaduna State, Nigeria, and I am a consultant with KPMG. It might sound like hyperbole, but my experience with GAIN has been a life-changing one. I found out about GAIN from its founder and CEO Mr. Richard Fashakin, at a point in my life when I needed to make big life-impacting decisions with regard to the next steps in my education and career. I needed help and I did not know where and how to go about it. I was at a point where I knew what I wanted <span class='dots'>...</span><span class='more'>       but had no idea if it was possible or how to even create a map to my goals. I needed guidance.    <br><br> Upon connecting with GAIN, the help and guidance they provided simplified what had initially seemed like difficult and impossible decisions. Not only did they go above and beyond the scope of my needs, they tailored their services to those needs. My experience with GAIN was so positive, that my only regret was not finding them sooner. In addition to helping me get admission into one of the top universities in the world, they also went above and beyond in providing me with career counselling which helped me create a map to my goals. A result of this is my job with KPMG and other top organizations in the world. This was something that I could not have envisioned prior to connecting with GAIN, and I am just getting started.    <br><br>      I remember when I had just connected with GAIN ahead of applying for my Postgraduate program abroad. Once we had identified the exams that I needed to take, Mr. Fashakin called me himself and took the time out of his busy schedule to put my mind at ease about the exam and the entire admission process. On that same call, he also took the time to develop a study plan for me for the exams. He also went out of his way, without me asking, to purchase ALL the study materials that I needed for the exams. After writing and passing the exams, I recall thinking that the exams were so easy. I remember thinking that I couldn't understand why people kept saying it was a difficult exam. But the truth is that it was easy because GAIN made it easy for me by helping and guiding me. They did not just meet my requested needs, but they met the needs that I did not even know that I had and gave me the tools to effectively deal with possible ones down the road. <br><br> An additional benefit from my experience with GAIN is how it has helped shape my approach to business, not just as a consultant but also as an entrepreneur. Their level of professionalism, expertise in their line of work, and their passion, drive and commitment have inspired me to also set the same standards for myself in any and all endeavors. This just adds credence to why I described my experience with GAIN as a life-changing one.    <br><br>        I would highly recommend GAIN and its services to anyone who needs education and career counselling, and/or has dreams of studying at one of the top universities in the world. GAIN can make your dreams a reality. This is because, speaking from experience, they basically made my dreams, their dreams too. This is what sets GAIN apart from other organizations. They were as passionate about achieving my dreams as I was. They tick all the boxes from communication, empathy and transparency, to being excellent and effective in the delivery of all their services.  ”</span><br/><br/><button onclick='readTestimonial()' class='read-more'>Read more</button>",
   },
+  {
+    index: 8,
+    name: "Tomi Shittu",
+    pictureSrc: "/assets/images/ayokanmi.jpg",
+    testimonial:
+      "“My name is Tomi Shittu. I was born and raised in Kaduna State, Nigeria, and I am a consultant with KPMG. It might sound like hyperbole, but my experience with GAIN has been a life-changing one. I found out about GAIN from its founder and CEO Mr. Richard Fashakin, at a point in my life when I needed to make big life-impacting decisions with regard to the next steps in my education and career. I needed help and I did not know where and how to go about it. I was at a point where I knew what I wanted <span class='dots'>...</span><span class='more'>       but had no idea if it was possible or how to even create a map to my goals. I needed guidance.    <br><br> Upon connecting with GAIN, the help and guidance they provided simplified what had initially seemed like difficult and impossible decisions. Not only did they go above and beyond the scope of my needs, they tailored their services to those needs. My experience with GAIN was so positive, that my only regret was not finding them sooner. In addition to helping me get admission into one of the top universities in the world, they also went above and beyond in providing me with career counselling which helped me create a map to my goals. A result of this is my job with KPMG and other top organizations in the world. This was something that I could not have envisioned prior to connecting with GAIN, and I am just getting started.    <br><br>      I remember when I had just connected with GAIN ahead of applying for my Postgraduate program abroad. Once we had identified the exams that I needed to take, Mr. Fashakin called me himself and took the time out of his busy schedule to put my mind at ease about the exam and the entire admission process. On that same call, he also took the time to develop a study plan for me for the exams. He also went out of his way, without me asking, to purchase ALL the study materials that I needed for the exams. After writing and passing the exams, I recall thinking that the exams were so easy. I remember thinking that I couldn't understand why people kept saying it was a difficult exam. But the truth is that it was easy because GAIN made it easy for me by helping and guiding me. They did not just meet my requested needs, but they met the needs that I did not even know that I had and gave me the tools to effectively deal with possible ones down the road. <br><br> An additional benefit from my experience with GAIN is how it has helped shape my approach to business, not just as a consultant but also as an entrepreneur. Their level of professionalism, expertise in their line of work, and their passion, drive and commitment have inspired me to also set the same standards for myself in any and all endeavors. This just adds credence to why I described my experience with GAIN as a life-changing one.    <br><br>        I would highly recommend GAIN and its services to anyone who needs education and career counselling, and/or has dreams of studying at one of the top universities in the world. GAIN can make your dreams a reality. This is because, speaking from experience, they basically made my dreams, their dreams too. This is what sets GAIN apart from other organizations. They were as passionate about achieving my dreams as I was. They tick all the boxes from communication, empathy and transparency, to being excellent and effective in the delivery of all their services.  ”</span><br/><br/><button onclick='readTestimonial()' class='read-more'>Read more</button>",
+  },
 ];
 
 let counter = 0;
 
 const testimonialContainer = document.querySelector(".testimonial-container");
-const testimonialSelectors = document.querySelectorAll(".testimonial-selector");
+const testimonialSelectorBox = document.querySelector(
+  ".testimonial-selector-box"
+);
 const testimonialName = document.querySelector(".testimonial-name");
 const testimonialImage = document.querySelector(".testimonial-image");
 const testimonialText = document.querySelector(".testimonial-text");
+
+testimonialsArray.forEach((testimonial) => {
+  console.log("Hi");
+  const divEl = document.createElement("div");
+  divEl.className = "testimonial-selector cursor-pointer";
+  if (testimonial.index === 1) divEl.classList.add("active");
+  divEl.innerHTML = `<svg viewBox="0 0 36 36" class="block w-10 h-10">
+  <path
+    class="fill-none stroke-faded-black-100 stroke-1 circle-bg transition-normal"
+    d="M18 2.0845
+    a 15.9155 15.9155 0 0 1 0 31.831
+    a 15.9155 15.9155 0 0 1 0 -31.831"
+  />
+  <path
+    class="circle fill-none stroke-faded-white-100 stroke-1 stroke-linecap-round"
+    stroke-dasharray="100, 100"
+    d="M18 2.0845
+    a 15.9155 15.9155 0 0 1 0 31.831
+    a 15.9155 15.9155 0 0 1 0 -31.831"
+  />
+  <text
+    x="18"
+    y="22"
+    class="number fill-faded-black-400 text-sm leading-[100%]"
+    id="10"
+  >
+    0${testimonial.index}
+  </text>
+</svg>`;
+  testimonialSelectorBox.appendChild(divEl);
+});
+
+const testimonialSelectors = document.querySelectorAll(".testimonial-selector");
 
 const selectTestimonial = (index) => {
   const testimonial = testimonialsArray[index];
@@ -247,6 +289,7 @@ selectTestimonial(0);
 
 testimonialSelectors.forEach((selector) => {
   selector.addEventListener("click", () => {
+    console.log("clicked");
     testimonialSelectors[counter].classList.remove("active");
     const number = selector.querySelector("text").textContent;
     counter = number - 1;
