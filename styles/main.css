@@ -199,6 +199,16 @@
   animation-fill-mode: backwards;
 }
 
+.hero-text-5 {
+  animation: fade-up 1s 0s ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+.hero-text-6 {
+  animation: fade-up 1s 0.3s ease-in-out;
+  animation-fill-mode: backwards;
+}
+
 /* Mission Section */
 .founder-image {
   aspect-ratio: 9/10;
