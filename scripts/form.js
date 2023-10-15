@@ -9,6 +9,7 @@ const sex = document.getElementById("sex");
 const school = document.getElementById("school");
 const educationLevel = document.getElementById("educationLevel");
 const submitBtn = document.querySelector(".submit-btn");
+const alert = document.querySelector(".alert");
 
 const errorArr = [];
 
@@ -36,6 +37,7 @@ form.addEventListener("submit", (e) => {
   const firstNameValue = firstName.value;
   const lastNameValue = lastName.value;
   const emailValue = email.value;
+  const phoneNumberValue = phoneNumber.value;
   const sexValue = sex.value;
   const dobValue = dob.value;
   const schoolValue = school.value;
@@ -60,10 +62,10 @@ form.addEventListener("submit", (e) => {
       school: schoolValue,
       educationLevel: educationLevelValue,
     };
-    console.log(data);
+    // console.log(data);
     submitBtn.disabled = true;
     submitBtn.textContent = "Submitting...";
-    const url = "http://localhost:5000/api/v1/members";
+    const url = "https://api-gainafrica.onrender.com/api/v1/members";
     fetch(url, {
       method: "POST",
       headers: {
@@ -73,14 +75,43 @@ form.addEventListener("submit", (e) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         submitBtn.disabled = false;
         submitBtn.textContent = "Submit";
+        if (data.msg === "Member created successfully") {
+          alert.classList.add("alert-success");
+          alert.textContent = "Form submitted successfully";
+          alert.classList.add("active");
+          firstName.value = "";
+          lastName.value = "";
+          email.value = "";
+          phoneNumber.value = "";
+          sex.value = "";
+          dob.value = "";
+          school.value = "";
+          educationLevel.value = "";
+          setTimeout(() => {
+            alert.classList.remove("active");
+          }, 3000);
+        } else {
+          alert.textContent = "An error occurred";
+          alert.classList.add("alert-error");
+          alert.classList.add("active");
+          setTimeout(() => {
+            alert.classList.remove("active");
+          }, 3000);
+        }
       })
       .catch((err) => {
         submitBtn.disabled = false;
         submitBtn.textContent = "Submit";
-        console.log(err);
+        // console.log(err);
+        alert.classList.add("alert-error");
+        alert.textContent = "An error occurred";
+        alert.classList.add("active");
+        setTimeout(() => {
+          alert.classList.remove("active");
+        }, 3000);
       });
   }
 });

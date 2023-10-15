@@ -10,6 +10,23 @@
   @apply text-[150px] leading-[90%] font-ppformula uppercase;
 }
 
+.alert {
+  @apply fixed left-[50%] translate-x-[-50%] -top-12 z-[100] bg-white px-5 py-2 border-2 text-center  max-w-[90%] rounded-lg shadow-lg inline-block;
+  transition: all 0.5s ease;
+}
+
+.alert.active {
+  top: 40px;
+}
+
+.alert-success {
+  @apply border-green text-green;
+}
+
+.alert-error {
+  @apply border-red-400 text-red-400;
+}
+
 @media screen and (max-width: 1024px) {
   .heading {
     @apply text-7xl;
