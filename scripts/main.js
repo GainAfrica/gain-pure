@@ -227,7 +227,7 @@ const testimonialsArray = [
   },
   {
     index: 8,
-    name: "Tomi Shittu",
+    name: "Ayokanmi Fatoyinbo",
     pictureSrc: "/assets/images/ayokanmi.jpg",
     testimonial:
       "Being in a low-income household as a child made it nearly impossible for my family to pay for my university education. My ambitions of achievement and employment in a wonderful workplace are extremely unlikely to come true if my family cannot finance my academic endeavors. Until I met Richard Fashakin, my aspirations seemed unattainable due to Nigeria's lack of scholarship options for further education. I got in touch with the education and advising center run by Richard Fashakin, which assisted highly talented kids from varying families to study abroad. Richard Fashakin helped me choose a suitable university in Germany and <span class='dots'>...</span><span class='more'>       gave me advice on how to get financial assistance and scholarships. I was able to bridge the financial gap and lessen my family's financial stress thanks to the financial help I got from my university. I'd say without a doubt that the founder of GAIN has an extensive international network, expertise, and proven track record and will deliver on his promise.  ”</span><br/><br/><button onclick='readTestimonial()' class='read-more'>Read more</button>",
