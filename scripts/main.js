@@ -1,3 +1,7 @@
+// preloader
+const preloader = document.querySelector(".preloader");
+setTimeout(() => preloader.classList.add("active"), 2000);
+
 // programs section
 let isHorizontalScrolling = false;
 let initialX = 0;
@@ -241,7 +245,6 @@ const testimonialImage = document.querySelector(".testimonial-image");
 const testimonialText = document.querySelector(".testimonial-text");
 
 testimonialsArray.forEach((testimonial) => {
-  console.log("Hi");
   const divEl = document.createElement("div");
   divEl.className = "testimonial-selector cursor-pointer";
   if (testimonial.index === 1) divEl.classList.add("active");

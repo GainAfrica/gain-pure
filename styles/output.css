@@ -672,6 +672,10 @@ video {
   z-index: 2;
 }
 
+.z-\[200\] {
+  z-index: 200;
+}
+
 .m-0 {
   margin: 0px;
 }
@@ -1652,6 +1656,14 @@ video {
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.duration-1000 {
+  transition-duration: 1000ms;
 }
 
 .heading {
