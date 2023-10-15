@@ -11,7 +11,7 @@
 }
 
 .alert {
-  @apply fixed left-[50%] translate-x-[-50%] -top-12 z-[100] bg-white px-5 py-2 border-2 text-center  max-w-[90%] rounded-lg shadow-lg inline-block;
+  @apply fixed left-[50%] translate-x-[-50%] -top-20 z-[100] bg-white px-5 py-2 border-2 text-center  max-w-[90%] rounded-lg shadow-lg inline-block;
   transition: all 0.5s ease;
 }
 
