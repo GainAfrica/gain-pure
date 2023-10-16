@@ -1010,10 +1010,6 @@ video {
   max-width: 301px;
 }
 
-.max-w-\[380px\] {
-  max-width: 380px;
-}
-
 .max-w-\[400px\] {
   max-width: 400px;
 }
@@ -1976,10 +1972,6 @@ video {
     max-width: 300px;
   }
 
-  .md\:max-w-\[480px\] {
-    max-width: 480px;
-  }
-
   .md\:flex-row {
     flex-direction: row;
   }
@@ -2094,10 +2086,6 @@ video {
 
   .lg\:min-w-\[500px\] {
     min-width: 500px;
-  }
-
-  .lg\:max-w-3xl {
-    max-width: 48rem;
   }
 
   .lg\:max-w-\[400px\] {
